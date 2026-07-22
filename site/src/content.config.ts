@@ -32,6 +32,9 @@ const services = defineCollection({
       .default([]),
     faq: z.array(z.object({ q: z.string(), a: z.string() })).default([]), // ใส่ FAQPage schema
     related: z.array(z.string()).default([]), // slug ของบริการที่เกี่ยวข้อง
+    areaLinks: z
+      .array(z.object({ label: z.string(), href: z.string() }))
+      .default([]), // ลิงก์ไปหน้า location ที่เกี่ยวข้อง (BRIEF ข้อ 7)
     serviceType: z.string(), // ใช้ใน Service schema (schema.org)
     draft: z.boolean().default(false),
   }),

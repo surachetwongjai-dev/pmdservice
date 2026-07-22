@@ -40,6 +40,11 @@ faq:
   - q: 'รับขัดพื้นพูลวิลล่าและโรงแรมไหม ทำงานนอกเวลาได้หรือเปล่า?'
     a: 'รับครับ ลูกค้ากลุ่มหลักของเราคือพูลวิลล่า โรงแรม รีสอร์ท และอาคารสำนักงานในภูเก็ต ทีมงานจัดรอบเข้าทำงานตามช่วงที่ห้องว่างหรือนอกเวลาทำการได้ เพื่อไม่กระทบแขกและผู้ใช้อาคาร'
 related: ['deep-cleaning-phuket', 'maid-hourly-phuket']
+areaLinks:
+  - { label: 'ขัดพื้นเชิงทะเล', href: '/locations/cherngtalay/' }
+  - { label: 'ขัดพื้นบางเทา', href: '/locations/bangtao/' }
+  - { label: 'ขัดพื้นไม้ขาว', href: '/locations/maikhao/' }
+  - { label: 'ขัดพื้นภูเก็ตทาวน์', href: '/locations/phuket-town/' }
 serviceType: 'Marble and tile floor polishing'
 ---
 

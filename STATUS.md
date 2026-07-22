@@ -1,6 +1,36 @@
-# STATUS — phuketmaidservice.com (รอบที่ 1)
+# STATUS — phuketmaidservice.com
 
-> สร้างเมื่อ: 22 ก.ค. 2026 | Stack: Astro 7 + Tailwind 4 (static) | โค้ดอยู่ใน `site/`
+> Stack: Astro 7 + Tailwind 4 (static) | โค้ดอยู่ใน `site/`
+> รอบ 1 (22 ก.ค. 2026): โครงเว็บ + หน้าแรก + 4 pillar + หน้ารอง
+> รอบ 2 (23 ก.ค. 2026): เพิ่มหน้า service ย่อย 22 หน้า + location 11 หน้า ครบตาม BRIEF ข้อ 7
+
+## อัปเดตรอบ 2 — หน้า service + location ครบทั้งไซต์
+
+**ยอดรวมตอนนี้: build ผ่าน 43 หน้า** (26 service + 11 location + หน้าแรก/pricing/contact/privacy/thank-you/404)
+
+### หน้า Service ครบ 26 หน้า (`/services/<slug>/`)
+- **4 Pillar** (รอบ 1): maid-hourly, sofa-cleaning, marble-polishing, deep-cleaning
+- **22 หน้าย่อย** (รอบ 2): house-cleaning, condo-cleaning, villa-cleaning, pool-villa-cleaning, hotel-cleaning, resort-cleaning, airbnb-cleaning, office-cleaning, daily-maid, weekly-maid, monthly-maid, big-cleaning, post-renovation-cleaning, post-construction-cleaning, move-in-cleaning, move-out-cleaning, ironing-service, window-cleaning, carpet-cleaning, mattress-cleaning, curtain-cleaning, sandwash-polishing
+
+### หน้า Location ครบ 11 หน้า (`/locations/<slug>/`)
+patong, kata, karon, rawai, cherngtalay, bangtao, kamala, chalong, phuket-town, maikhao, naiyang
+
+### ผลตรวจคุณภาพรอบ 2 (สคริปต์อยู่ใน `site/scripts/`)
+- **Build**: ผ่าน 43 หน้า ไม่มี error
+- **Sitemap**: 41 URL (ไม่รวม thank-you ที่ noindex + 404) — service 26 + location 11 + หน้าหลัก 4 ครบ
+- **Internal links** (`check-links.mjs`): ตรวจ 94 URL จาก 43 หน้า **ไม่มีลิงก์เสีย** — service↔location↔pillar เชื่อมกันครบ (footer มีแถบ 11 location, หน้า pillar มี chips ลิงก์ location, หน้า location มี popularServices ลิงก์ service)
+- **Uniqueness** (`check-unique.mjs`): 37 หน้า content **ไม่มีคู่ไหนซ้ำเกิน 10%** (character-shingle overlap) — กัน copy ข้ามหน้า/doorway page
+- **Schema**: สุ่มตรวจแล้วทุกหน้ามี FAQPage + BreadcrumbList, หน้า service มี Service schema, h1 เดียวต่อหน้า
+- **Screenshot สุ่ม 5 หน้า** (`screenshots/round2-*.png`): villa-cleaning, monthly-maid, carpet-cleaning (mobile), patong, cherngtalay (mobile) — layout ครบทุก section, CTA above the fold, FAQ accordion, areaLinks ทำงาน
+
+### หมายเหตุการทำงานรอบ 2
+- หน้า location เขียนเนื้อหาเฉพาะย่านจริงตาม BRIEF (ประเภทที่พักเด่น เช่น เชิงทะเล=พูลวิลล่า/ลากูน่า, ในยาง=Airbnb ใกล้สนามบิน, ป่าตอง=คอนโด/โรงแรม + สั่งงานทางไกล) — กัน Google มองเป็น doorway page
+- 15 หน้า service เขียนโดย subagent ขนาน, 7 หน้าเขียนต่อโดยตรง (airbnb, monthly-maid, big-cleaning, post-renovation, post-construction, move-in, move-out) เพราะ subagent ชุดหนึ่งชน session limit — เนื้อหาผ่าน uniqueness check เท่ากัน
+- ทุกหน้ามีราคาเฉพาะที่อยู่ใน BRIEF ที่เหลือ "สอบถามราคา", ไม่มีรีวิว/สถิติปลอม
+
+---
+
+## (รอบที่ 1) โครงเว็บและหน้าหลัก
 
 ## สิ่งที่สร้างเสร็จในรอบนี้
 

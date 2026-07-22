@@ -40,6 +40,11 @@ faq:
   - q: 'มีบริการแม่บ้านรายวัน รายสัปดาห์ หรือรายเดือนไหม?'
     a: 'มีครบทั้งรายชั่วโมง รายวัน รายสัปดาห์ และรายเดือน เหมาะทั้งบ้านพักอาศัย คอนโด วิลล่า Airbnb และสำนักงาน แพ็กเกจประจำมีราคาพิเศษ สอบถามใบเสนอราคาได้ทาง LINE'
 related: ['deep-cleaning-phuket', 'sofa-cleaning-phuket']
+areaLinks:
+  - { label: 'แม่บ้านป่าตอง', href: '/locations/patong/' }
+  - { label: 'แม่บ้านภูเก็ตทาวน์', href: '/locations/phuket-town/' }
+  - { label: 'แม่บ้านเชิงทะเล', href: '/locations/cherngtalay/' }
+  - { label: 'แม่บ้านฉลอง', href: '/locations/chalong/' }
 serviceType: 'Hourly maid service'
 ---
 

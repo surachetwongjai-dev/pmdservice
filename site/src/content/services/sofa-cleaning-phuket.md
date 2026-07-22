@@ -43,6 +43,11 @@ faq:
   - q: 'ซักผ้าม่านต้องถอดผ้าม่านไหม?'
     a: 'ไม่ต้องถอด ทีมงานซักด้วยระบบไอน้ำถึงที่ทั้งผืนขณะแขวนอยู่ ลดความเสี่ยงผ้าหดหรือรางเสียหาย และไม่ต้องเสียเวลารอส่งซักหลายวัน'
 related: ['deep-cleaning-phuket', 'maid-hourly-phuket']
+areaLinks:
+  - { label: 'ซักโซฟาป่าตอง', href: '/locations/patong/' }
+  - { label: 'ซักโซฟาราไวย์', href: '/locations/rawai/' }
+  - { label: 'ซักโซฟากมลา', href: '/locations/kamala/' }
+  - { label: 'ซักโซฟาบางเทา', href: '/locations/bangtao/' }
 serviceType: 'Sofa, mattress and curtain steam cleaning'
 ---
 

@@ -78,7 +78,28 @@ const quickLinks = [
   </div>
 
   <div class="border-t border-white/10">
-    <p class="mx-auto max-w-6xl px-4 py-5 text-center text-xs text-brand-100/70">
+    <nav class="mx-auto max-w-6xl px-4 py-4 text-center text-xs leading-relaxed text-brand-100/80" aria-label="พื้นที่ให้บริการ">
+      <span class="font-bold text-white">พื้นที่ให้บริการ:</span>
+      {[
+        ['ป่าตอง', 'patong'],
+        ['กะตะ', 'kata'],
+        ['กะรน', 'karon'],
+        ['ราไวย์', 'rawai'],
+        ['เชิงทะเล', 'cherngtalay'],
+        ['บางเทา', 'bangtao'],
+        ['กมลา', 'kamala'],
+        ['ฉลอง', 'chalong'],
+        ['ภูเก็ตทาวน์', 'phuket-town'],
+        ['ไม้ขาว', 'maikhao'],
+        ['ในยาง', 'naiyang'],
+      ].map(([label, slug], i) => (
+        <>
+          {i > 0 && <span aria-hidden="true"> · </span>}
+          <a href={`/locations/${slug}/`} class="hover:text-white hover:underline">{label}</a>
+        </>
+      ))}
+    </nav>
+    <p class="mx-auto max-w-6xl border-t border-white/10 px-4 py-5 text-center text-xs text-brand-100/70">
       © {year} {SITE.name} — {SITE.legalName} สงวนลิขสิทธิ์ | บริการทำความสะอาด แม่บ้าน ภูเก็ต
     </p>
   </div>

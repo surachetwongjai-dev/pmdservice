@@ -41,6 +41,11 @@ faq:
   - q: 'ใช้เวลากี่ชั่วโมง และต้องอยู่บ้านระหว่างทำไหม?'
     a: 'ขึ้นอยู่กับขนาดพื้นที่ โดยทั่วไปคอนโดใช้ครึ่งวัน บ้านทั้งหลังใช้เต็มวันหรือมากกว่า ลูกค้าไม่จำเป็นต้องอยู่ตลอด แต่แนะนำให้อยู่ตอนเริ่มงานเพื่อชี้จุดสำคัญ และตอนจบงานเพื่อตรวจรับร่วมกัน ทีมงานทุกคนผ่านการตรวจประวัติและมีประกันคุ้มครอง'
 related: ['maid-hourly-phuket', 'sofa-cleaning-phuket', 'marble-polishing-phuket']
+areaLinks:
+  - { label: 'Deep Cleaning ป่าตอง', href: '/locations/patong/' }
+  - { label: 'Deep Cleaning กะตะ', href: '/locations/kata/' }
+  - { label: 'Deep Cleaning ในยาง', href: '/locations/naiyang/' }
+  - { label: 'Deep Cleaning ฉลอง', href: '/locations/chalong/' }
 serviceType: 'Deep cleaning and big cleaning'
 ---
 
