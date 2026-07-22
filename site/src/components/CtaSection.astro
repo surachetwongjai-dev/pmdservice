@@ -1,0 +1,20 @@
+---
+import CtaButtons from './CtaButtons.astro';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+}
+const {
+  title = 'พร้อมให้บริการทั่วภูเก็ต จองคิววันนี้',
+  subtitle = 'โทรหรือแอด LINE รับใบเสนอราคาฟรี ไม่มีข้อผูกมัด — ทีมงานตอบทั้งภาษาไทยและอังกฤษ',
+} = Astro.props;
+---
+
+<section class="bg-gradient-to-r from-navy-900 to-brand-700 py-14 text-white">
+  <div class="mx-auto flex max-w-6xl flex-col items-center gap-5 px-4 text-center">
+    <h2 class="text-2xl font-extrabold md:text-3xl">{title}</h2>
+    <p class="max-w-2xl text-brand-100">{subtitle}</p>
+    <CtaButtons />
+  </div>
+</section>

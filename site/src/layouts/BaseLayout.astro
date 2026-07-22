@@ -1,0 +1,128 @@
+---
+import '@fontsource-variable/noto-sans-thai';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import MobileCtaBar from '../components/MobileCtaBar.astro';
+import { SITE } from '../lib/site';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  /** JSON-LD เพิ่มเติมของหน้านั้น (Service, FAQPage, BreadcrumbList ฯลฯ) */
+  schema?: object[];
+  /** meta keywords เสริม (ใช้เท่าที่จำเป็น เช่น คำสะกดผิดของ deep cleaning) */
+  keywords?: string;
+  /** true = ใส่ noindex (เช่น หน้า thank-you) */
+  noindex?: boolean;
+}
+
+const { title, description, ogImage = '/images/team-window-cleaning-phuket.webp', schema = [], keywords, noindex = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, SITE.domain).href;
+const ogImageAbs = new URL(ogImage, SITE.domain).href;
+
+const localBusiness = {
+  '@context': 'https://schema.org',
+  '@type': 'HousekeepingService' as const,
+  '@id': `${SITE.domain}/#business`,
+  name: SITE.name,
+  legalName: SITE.legalName,
+  url: SITE.domain,
+  image: ogImageAbs,
+  telephone: SITE.phoneIntl,
+  email: SITE.email,
+  priceRange: '฿฿',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: SITE.address.street,
+    addressLocality: 'ป่าคลอก ถลาง',
+    addressRegion: 'ภูเก็ต',
+    postalCode: SITE.address.postalCode,
+    addressCountry: 'TH',
+  },
+  areaServed: { '@type': 'AdministrativeArea', name: 'จังหวัดภูเก็ต' },
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+    opens: '08:00',
+    closes: '18:00',
+  },
+  sameAs: [SITE.facebook],
+};
+
+const jsonLd = [localBusiness, ...schema];
+---
+
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    {noindex && <meta name="robots" content="noindex" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta name="generator" content={Astro.generator} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content="th_TH" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImageAbs} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageAbs} />
+
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+
+    <!-- Google Tag Manager — TODO: แทน GTM-XXXXXXX ด้วย ID จริงแล้วปลด comment
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || []; w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true; j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-XXXXXXX');
+    </script>
+    -->
+  </head>
+  <body class="bg-white text-navy-900 antialiased">
+    <!-- GTM noscript — ปลด comment พร้อมด้านบน
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    -->
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <MobileCtaBar />
+
+    <!-- Conversion events: ยิง dataLayer เมื่อคลิกโทร / LINE / WhatsApp (GTM อ่าน event นี้ไปทำ conversion) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      document.addEventListener('click', (e) => {
+        const a = e.target instanceof Element ? e.target.closest('a') : null;
+        if (!a) return;
+        const href = a.getAttribute('href') || '';
+        if (href.startsWith('tel:')) {
+          window.dataLayer.push({ event: 'click_call', link_url: href, page_path: location.pathname });
+        } else if (href.includes('line.me')) {
+          window.dataLayer.push({ event: 'click_line', link_url: href, page_path: location.pathname });
+        } else if (href.includes('wa.me')) {
+          window.dataLayer.push({ event: 'click_whatsapp', link_url: href, page_path: location.pathname });
+        }
+      });
+    </script>
+  </body>
+</html>

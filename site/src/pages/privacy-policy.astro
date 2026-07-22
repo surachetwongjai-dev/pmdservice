@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../lib/site';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [{ label: 'หน้าแรก', href: '/' }, { label: 'นโยบายความเป็นส่วนตัว' }];
+---
+
+<BaseLayout
+  title="นโยบายความเป็นส่วนตัว (PDPA) | Phuket Maid Service"
+  description="นโยบายความเป็นส่วนตัวของ Phuket Maid Service (บริษัท ภูอันดา จำกัด) ตาม พ.ร.บ.คุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA) การเก็บ ใช้ และสิทธิของเจ้าของข้อมูล"
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-3xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-3xl px-4 pb-8 pt-6">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">นโยบายความเป็นส่วนตัว</h1>
+      <p class="mt-3 text-sm text-ink-600">Privacy Policy — ปรับปรุงล่าสุด: กรกฎาคม 2569 (2026)</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-10">
+    <div class="mx-auto max-w-3xl space-y-8 px-4 text-[15px] leading-relaxed text-ink-600">
+      <div>
+        <p>
+          {SITE.name} ดำเนินการโดย {SITE.legalName} ("บริษัท", "เรา") ให้ความสำคัญกับการคุ้มครองข้อมูลส่วนบุคคลของผู้ใช้เว็บไซต์
+          phuketmaidservice.com และลูกค้าทุกท่าน นโยบายฉบับนี้จัดทำขึ้นตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)
+          เพื่ออธิบายว่าเราเก็บรวบรวม ใช้ และเปิดเผยข้อมูลส่วนบุคคลของท่านอย่างไร
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">1. ข้อมูลที่เราเก็บรวบรวม</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6">
+          <li><strong class="text-navy-900">ข้อมูลที่ท่านให้โดยตรง:</strong> ชื่อ เบอร์โทรศัพท์ LINE ID อีเมล ที่อยู่/พื้นที่รับบริการ และรายละเอียดงานที่กรอกผ่านฟอร์มติดต่อ หรือแจ้งผ่านโทรศัพท์ LINE, WhatsApp และ Facebook</li>
+          <li><strong class="text-navy-900">ข้อมูลการใช้งานเว็บไซต์:</strong> ข้อมูลทางเทคนิค เช่น หมายเลข IP ชนิดเบราว์เซอร์ และหน้าที่เข้าชม ผ่านคุกกี้และเครื่องมือวิเคราะห์/โฆษณา (เช่น Google Analytics, Google Ads) เพื่อปรับปรุงบริการและวัดผลโฆษณา</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">2. วัตถุประสงค์ในการใช้ข้อมูล</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6">
+          <li>ติดต่อกลับ เสนอราคา นัดหมาย และให้บริการทำความสะอาดตามที่ท่านร้องขอ</li>
+          <li>ออกใบเสนอราคา ใบแจ้งหนี้ และเอกสารทางบัญชีที่เกี่ยวข้อง</li>
+          <li>ปรับปรุงคุณภาพบริการ เว็บไซต์ และประสิทธิภาพของแคมเปญโฆษณา</li>
+          <li>ปฏิบัติตามกฎหมายที่เกี่ยวข้อง</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">3. การเปิดเผยข้อมูล</h2>
+        <p class="mt-3">
+          เราไม่ขายหรือให้เช่าข้อมูลส่วนบุคคลของท่านแก่บุคคลภายนอก ข้อมูลอาจถูกเปิดเผยเฉพาะแก่
+          (ก) ทีมงานผู้ให้บริการของบริษัทเท่าที่จำเป็นต่อการปฏิบัติงาน
+          (ข) ผู้ให้บริการระบบที่เราใช้ เช่น ระบบรับส่งอีเมลของฟอร์มติดต่อ และ
+          (ค) หน่วยงานรัฐเมื่อมีหน้าที่ตามกฎหมาย
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">4. คุกกี้ (Cookies)</h2>
+        <p class="mt-3">
+          เว็บไซต์นี้อาจใช้คุกกี้เพื่อการทำงานของเว็บไซต์ การวิเคราะห์การใช้งาน และการวัดผลโฆษณา Google Ads
+          ท่านสามารถตั้งค่าเบราว์เซอร์เพื่อปฏิเสธคุกกี้ได้ โดยบางฟังก์ชันของเว็บไซต์อาจทำงานได้ไม่สมบูรณ์
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">5. ระยะเวลาเก็บรักษาและความปลอดภัย</h2>
+        <p class="mt-3">
+          เราเก็บข้อมูลส่วนบุคคลไว้เท่าที่จำเป็นตามวัตถุประสงค์ข้างต้น หรือตามที่กฎหมายกำหนด
+          และจัดให้มีมาตรการรักษาความปลอดภัยที่เหมาะสมเพื่อป้องกันการเข้าถึง ใช้ หรือเปิดเผยข้อมูลโดยไม่ได้รับอนุญาต
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">6. สิทธิของเจ้าของข้อมูล</h2>
+        <p class="mt-3">ภายใต้ PDPA ท่านมีสิทธิขอเข้าถึง ขอสำเนา ขอแก้ไข ขอลบ ขอระงับการใช้ ขอคัดค้านการประมวลผล และขอถอนความยินยอมเกี่ยวกับข้อมูลส่วนบุคคลของท่าน โดยติดต่อเราตามช่องทางด้านล่าง</p>
+      </div>
+
+      <div class="rounded-2xl border border-brand-100 bg-brand-50/60 p-5">
+        <h2 class="text-xl font-extrabold text-navy-900">7. ช่องทางติดต่อผู้ควบคุมข้อมูล</h2>
+        <p class="mt-3">
+          {SITE.legalName}<br />
+          {SITE.address.full}<br />
+          โทร: <a href={`tel:${SITE.phoneIntl}`} class="font-bold text-brand-600">{SITE.phoneDisplay}</a> |
+          อีเมล: <a href={`mailto:${SITE.email}`} class="font-bold text-brand-600">{SITE.email}</a><br />
+          เวลาทำการ: {SITE.openingHours}
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

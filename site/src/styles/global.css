@@ -1,0 +1,43 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-sans: 'Noto Sans Thai Variable', 'Noto Sans Thai', 'Helvetica Neue', Arial, sans-serif;
+
+  --color-navy-950: #0a1f3d;
+  --color-navy-900: #0f2a52;
+  --color-navy-800: #16376b;
+  --color-brand-700: #1a4692;
+  --color-brand-600: #1e4fa3;
+  --color-brand-500: #2563b8;
+  --color-brand-100: #dbeafe;
+  --color-brand-50: #eff6fb;
+  --color-ink-600: #5b6b82;
+  --color-line-600: #06c755;
+  --color-line-700: #05b34c;
+  --color-star-500: #f5a623;
+
+  --shadow-card: 0 10px 30px rgba(15, 42, 82, 0.08);
+  --shadow-card-hover: 0 16px 40px rgba(15, 42, 82, 0.16);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  color: var(--color-navy-900);
+  line-break: strict;
+  overflow-wrap: break-word;
+}
+
+/* หัวข้อ section มาตรฐาน */
+.section-title {
+  @apply text-3xl md:text-4xl font-extrabold text-navy-900;
+}
+.section-eyebrow {
+  @apply text-sm font-semibold tracking-wide text-brand-600 uppercase;
+}
+.section-underline {
+  @apply mx-auto mt-3 h-1 w-16 rounded-full bg-brand-600;
+}

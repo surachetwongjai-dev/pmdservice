@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+import CtaSection from '../components/CtaSection.astro';
+import TrustBadges from '../components/TrustBadges.astro';
+import { breadcrumbSchema } from '../lib/schema';
+
+const crumbs = [{ label: 'หน้าแรก', href: '/' }, { label: 'ราคาบริการ' }];
+
+// ราคาจาก BRIEF.md เท่านั้น — รายการที่ไม่มีราคาใน Brief ใช้ "สอบถามราคา"
+const groups = [
+  {
+    title: 'แม่บ้านทำความสะอาด',
+    href: '/services/maid-hourly-phuket/',
+    rows: [
+      { label: 'ทำความสะอาดทั่วไป (รายชั่วโมง)', price: '250 บาท/ชม.', note: 'ยังไม่รวมภาษี พร้อมอุปกรณ์และน้ำยา' },
+      { label: 'แม่บ้านรายวัน / รายสัปดาห์ / รายเดือน', price: 'สอบถามราคา', note: 'แพ็กเกจประจำมีราคาพิเศษ' },
+      { label: 'รีดผ้า', price: '12.5 บาท/ชิ้น', note: 'ขั้นต่ำ 40 ชิ้น' },
+    ],
+  },
+  {
+    title: 'Deep Cleaning / Big Cleaning',
+    href: '/services/deep-cleaning-phuket/',
+    rows: [
+      { label: 'Big Cleaning Package', price: 'เริ่มต้น 4,000 บาท', note: 'ตามขนาดพื้นที่และสภาพหน้างาน' },
+      { label: 'ทำความสะอาดหลังก่อสร้าง / รีโนเวท', price: 'สอบถามราคา', note: 'ประเมินจากรูปหรือหน้างาน' },
+    ],
+  },
+  {
+    title: 'ขัดพื้น',
+    href: '/services/marble-polishing-phuket/',
+    rows: [
+      { label: 'ขัดพื้นหินอ่อน ขัดเงา', price: '250 บาท/ตร.ม.', note: 'ทดลองขัดก่อนตัดสินใจได้' },
+      { label: 'ขัดทรายล้าง / ลงแว็กซ์', price: '100 บาท/ตร.ม.', note: 'เหมาะกับพื้นรอบสระ ทางเดิน' },
+    ],
+  },
+  {
+    title: 'ซักโซฟา ที่นอน ผ้าม่าน (ระบบไอน้ำฆ่าเชื้อ)',
+    href: '/services/sofa-cleaning-phuket/',
+    rows: [
+      { label: 'ซักโซฟา (ต่อที่นั่ง)', price: 'สอบถามราคา', note: 'ส่งรูปทาง LINE ประเมินฟรี' },
+      { label: 'ซักที่นอน กำจัดไรฝุ่น', price: 'สอบถามราคา', note: 'ตามขนาดที่นอน' },
+      { label: 'ซักผ้าม่าน (ไม่ต้องถอด)', price: 'สอบถามราคา', note: 'ซักถึงที่ด้วยไอน้ำ' },
+      { label: 'ซักพรม / เก้าอี้สำนักงาน', price: 'สอบถามราคา', note: 'เหมาหลายตัวมีราคาพิเศษ' },
+    ],
+  },
+  {
+    title: 'บริการอื่นๆ',
+    href: '/contact/',
+    rows: [
+      { label: 'เช็ดกระจกอาคาร', price: 'สอบถามราคา', note: 'ตามขนาดพื้นที่และความสูง' },
+      { label: 'ทำความสะอาดโรงแรม รีสอร์ท Airbnb สำนักงาน', price: 'สอบถามราคา', note: 'มีแพ็กเกจรายเดือนสำหรับธุรกิจ' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="ราคาบริการทำความสะอาดภูเก็ต ทุกรายการ | Phuket Maid Service"
+  description="ตารางราคาบริการทำความสะอาดภูเก็ต แม่บ้านรายชั่วโมง 250 บ./ชม. Big Cleaning เริ่ม 4,000 บ. ขัดหินอ่อน 250 บ./ตร.ม. รีดผ้า 12.5 บ./ชิ้น ราคาชัดเจนไม่มีบวกเพิ่ม โทร 061-965-6292"
+  schema={[breadcrumbSchema(crumbs)]}
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">ราคาบริการทำความสะอาดภูเก็ต</h1>
+      <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-ink-600">
+        ราคาชัดเจน ตกลงก่อนเริ่มงานทุกครั้ง ไม่มีบวกเพิ่มหน้างาน
+        รายการที่ระบุ "สอบถามราคา" ส่งรูปประเมินฟรีทาง LINE ได้เลย
+      </p>
+      <CtaButtons class="mt-6 justify-center" />
+    </div>
+  </section>
+
+  <section class="bg-white py-12 md:py-16">
+    <div class="mx-auto max-w-4xl space-y-10 px-4">
+      {groups.map((g) => (
+        <div>
+          <div class="flex items-center justify-between gap-3">
+            <h2 class="text-xl font-extrabold text-navy-900 md:text-2xl">{g.title}</h2>
+            <a href={g.href} class="shrink-0 text-sm font-bold text-brand-600 hover:underline">รายละเอียด →</a>
+          </div>
+          <div class="mt-4 overflow-hidden rounded-2xl border border-brand-100 shadow-card">
+            <table class="w-full text-sm">
+              <thead class="bg-navy-900 text-left text-white">
+                <tr>
+                  <th class="px-4 py-3 font-bold">รายการ</th>
+                  <th class="px-4 py-3 text-right font-bold">ราคา</th>
+                </tr>
+              </thead>
+              <tbody>
+                {g.rows.map((row, i) => (
+                  <tr class:list={[i % 2 === 1 && 'bg-brand-50/60']}>
+                    <td class="px-4 py-3.5">
+                      <span class="font-semibold text-navy-900">{row.label}</span>
+                      {row.note && <span class="block text-xs text-ink-600">{row.note}</span>}
+                    </td>
+                    <td class="px-4 py-3.5 text-right font-extrabold text-brand-600">{row.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+      <p class="text-xs text-ink-600">* ราคายังไม่รวมภาษี — ใบเสนอราคาอย่างเป็นทางการออกในนาม บริษัท ภูอันดา จำกัด</p>
+    </div>
+  </section>
+
+  <section class="border-t border-brand-50 bg-white pb-14">
+    <div class="mx-auto max-w-6xl px-4 pt-10">
+      <TrustBadges />
+    </div>
+  </section>
+
+  <CtaSection title="อยากรู้ราคางานของคุณ? ส่งรูปประเมินฟรี" subtitle="ทักไลน์ส่งรูปหน้างาน ทีมงานตอบราคาไว ทั้งภาษาไทยและอังกฤษ" />
+</BaseLayout>

@@ -1,0 +1,273 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionHeading from '../components/SectionHeading.astro';
+import CtaButtons from '../components/CtaButtons.astro';
+import CtaSection from '../components/CtaSection.astro';
+import Testimonials from '../components/Testimonials.astro';
+import { SITE } from '../lib/site';
+
+const services = [
+  {
+    title: 'แม่บ้านรายชั่วโมง',
+    en: 'Hourly Maid Service',
+    desc: 'จ้างแม่บ้านภูเก็ตรายชั่วโมง/รายวัน/รายเดือน เริ่ม 250 บ./ชม. พร้อมอุปกรณ์ครบ',
+    href: '/services/maid-hourly-phuket/',
+    img: '/images/maid-kitchen-cabinet-cleaning-phuket.webp',
+    alt: 'แม่บ้านภูเก็ตทำความสะอาดห้องครัวรายชั่วโมง',
+    icon: 'M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 12c4.4 0 8 2.2 8 5v3H4v-3c0-2.8 3.6-5 8-5Z',
+  },
+  {
+    title: 'ซักโซฟา ที่นอน ผ้าม่าน',
+    en: 'Sofa & Mattress Cleaning',
+    desc: 'ระบบไอน้ำฆ่าเชื้อ กำจัดไรฝุ่นและคราบฝังลึก ด้วยเครื่องมือมืออาชีพ',
+    href: '/services/sofa-cleaning-phuket/',
+    img: '/images/sofa-steam-cleaning-phuket.webp',
+    alt: 'ซักโซฟาภูเก็ตด้วยเครื่องซักระบบไอน้ำฆ่าเชื้อ',
+    icon: 'M4 9V7a3 3 0 0 1 3-3h10a3 3 0 0 1 3 3v2a3 3 0 0 1 3 3v5a2 2 0 0 1-2 2h-1v2h-2v-2H6v2H4v-2H3a2 2 0 0 1-2-2v-5a3 3 0 0 1 3-3Zm2 0h12V7a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1v2Z',
+  },
+  {
+    title: 'ขัดพื้นหินอ่อน กระเบื้อง',
+    en: 'Marble Polishing',
+    desc: 'ขัดเงาหินอ่อน 250 บ./ตร.ม. ขัดทรายล้างลงแว็กซ์ 100 บ./ตร.ม. ทดลองก่อนได้',
+    href: '/services/marble-polishing-phuket/',
+    img: '/images/marble-floor-polishing-phuket.webp',
+    alt: 'ขัดพื้นหินอ่อนภูเก็ตด้วยเครื่องขัดเงามืออาชีพ',
+    icon: 'M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm12 0 4 4-4 4-4-4 4-4Z',
+  },
+  {
+    title: 'Deep Cleaning บ้าน คอนโด',
+    en: 'Deep Cleaning',
+    desc: 'Big Cleaning ทำความสะอาดครั้งใหญ่ เริ่มต้น 4,000 บ. เหมาะกับบ้านก่อนเข้าอยู่',
+    href: '/services/deep-cleaning-phuket/',
+    img: '/images/living-room-deep-cleaning-phuket.webp',
+    alt: 'Deep Cleaning ภูเก็ต ทำความสะอาดบ้านครั้งใหญ่ทุกซอกมุม',
+    icon: 'm12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2Z',
+  },
+  {
+    title: 'เช็ดกระจกอาคาร',
+    en: 'Window Cleaning',
+    desc: 'เช็ดกระจกบ้าน อาคาร สำนักงาน ใสสะอาดไร้คราบ ทีมงานพร้อมอุปกรณ์ครบ',
+    href: '/pricing/',
+    img: '/images/window-squeegee-cleaning-phuket.webp',
+    alt: 'เช็ดกระจกอาคารภูเก็ตด้วยอุปกรณ์รีดน้ำมืออาชีพ',
+    icon: 'M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Zm1 2v6.5h6.5V5H5Zm8.5 0v6.5H20V5h-6.5ZM5 13.5V20h6.5v-6.5H5Zm8.5 0V20H20v-6.5h-6.5Z',
+  },
+  {
+    title: 'บริการเสริมอื่นๆ',
+    en: 'More Services',
+    desc: 'รีดผ้า 12.5 บ./ชิ้น ทำความสะอาดโรงแรม รีสอร์ท Airbnb สำนักงาน และอื่นๆ',
+    href: '/pricing/',
+    img: '/images/office-building-cleaning-phuket.webp',
+    alt: 'ทีมแม่บ้านภูเก็ตทำความสะอาดอาคารสำนักงาน',
+    icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 5v4.6l3.5 2-1 1.7L11 12.7V7h2Z',
+  },
+];
+
+const stats = [
+  { big: 'เจ้าแรก', small: 'จองแม่บ้านออนไลน์ในภูเก็ต' },
+  { big: '100%', small: 'ตรวจประวัติอาชญากรรมทุกคน' },
+  { big: '100,000 บ.', small: 'ประกันความเสียหายทุกงาน' },
+  { big: 'ทั่วภูเก็ต', small: 'บริการถึงที่ทุกอำเภอ' },
+];
+
+const whyUs = [
+  { title: 'อบรมมาตรฐานทุกคน', desc: 'แม่บ้านผ่านการฝึกอบรมก่อนเริ่มงานจริง', icon: 'M12 3 1 9l11 6 9-4.9V17h2V9L12 3ZM5 13.2V17c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.8-7-3.8Z' },
+  { title: 'ตรวจประวัติอาชญากรรม', desc: 'จากสำนักงานตำรวจแห่งชาติทุกคน วางใจได้', icon: 'M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 12c4.4 0 8 2.2 8 5v3H4v-3c0-2.8 3.6-5 8-5Z' },
+  { title: 'ประกัน 100,000 บาท', desc: 'ทุกงานคุ้มครองความเสียหายด้วยวงเงินประกัน', icon: 'M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Z' },
+  { title: 'พร้อมอุปกรณ์และน้ำยา', desc: 'ทีมงานนำเครื่องมือมาตรฐานไปเองครบชุด', icon: 'M19.4 7.3 16.7 4.6a2 2 0 0 0-2.8 0l-9.3 9.3a2 2 0 0 0 0 2.8l2.7 2.7a2 2 0 0 0 2.8 0l9.3-9.3a2 2 0 0 0 0-2.8Z' },
+  { title: 'Thai & English', desc: 'รองรับลูกค้าไทยและต่างชาติ จองง่าย ตอบไว', icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm7.9 9h-3a15.6 15.6 0 0 0-1.2-5.2A8 8 0 0 1 19.9 11ZM12 4c.9 1.2 1.7 3.3 1.9 7h-3.8c.2-3.7 1-5.8 1.9-7Zm-3.7 1.8A15.6 15.6 0 0 0 7.1 11h-3a8 8 0 0 1 4.2-5.2ZM4.1 13h3c.2 1.9.6 3.7 1.2 5.2A8 8 0 0 1 4.1 13ZM12 20c-.9-1.2-1.7-3.3-1.9-7h3.8c-.2 3.7-1 5.8-1.9 7Zm3.7-1.8c.6-1.5 1-3.3 1.2-5.2h3a8 8 0 0 1-4.2 5.2Z' },
+];
+
+const works = [
+  { img: '/images/team-window-cleaning-phuket.webp', alt: 'ทีมแม่บ้าน Phuket Maid Service เช็ดกระจกอาคารสำนักงานในภูเก็ต', label: 'ทำความสะอาดอาคารสำนักงาน' },
+  { img: '/images/armchair-steam-cleaning-phuket.webp', alt: 'ซักเก้าอี้โซฟาด้วยไอน้ำฆ่าเชื้อที่คอนโดภูเก็ต', label: 'ซักโซฟา / เก้าอี้ผ้า' },
+  { img: '/images/marble-floor-polishing-phuket.webp', alt: 'ขัดเงาพื้นกระเบื้องด้วยเครื่องขัดที่สำนักงานภูเก็ต', label: 'ขัดพื้น / ลงแว็กซ์' },
+  { img: '/images/bathroom-shower-deep-cleaning-phuket.webp', alt: 'Deep Cleaning ห้องน้ำ ขัดคราบกระจกฝักบัวภูเก็ต', label: 'Deep Cleaning ห้องน้ำ' },
+  { img: '/images/kitchen-cleaning-maid-phuket.webp', alt: 'แม่บ้านทำความสะอาดห้องครัวบ้านลูกค้าในภูเก็ต', label: 'ทำความสะอาดห้องครัว' },
+  { img: '/images/mattress-drying-airbnb-phuket.webp', alt: 'ซักที่นอนพร้อมเป่าแห้งห้องพัก Airbnb ภูเก็ต', label: 'บริการห้องพัก Airbnb' },
+];
+---
+
+<BaseLayout
+  title="แม่บ้านภูเก็ต บริการทำความสะอาดครบวงจร | Phuket Maid Service"
+  description="บริการทำความสะอาดภูเก็ต แม่บ้านรายชั่วโมง 250 บ./ชม. Deep Cleaning ซักโซฟา-ที่นอนไอน้ำฆ่าเชื้อ ขัดพื้นหินอ่อน เจ้าแรกจองออนไลน์ ตรวจประวัติทุกคน ประกัน 100,000 บ. โทร 061-965-6292"
+>
+  <!-- Hero -->
+  <section class="relative overflow-hidden bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 py-12 md:py-16 lg:grid-cols-[1.05fr_1fr]">
+      <div>
+        <p class="mb-3 inline-flex items-center gap-2 rounded-full bg-brand-100 px-4 py-1.5 text-xs font-bold text-brand-700">
+          <span class="h-2 w-2 rounded-full bg-line-600"></span>
+          เจ้าแรกที่ให้บริการจองแม่บ้านออนไลน์ในภูเก็ต
+        </p>
+        <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-navy-900 md:text-5xl">
+          บริการทำความสะอาด<br />
+          <span class="text-brand-600">แม่บ้านภูเก็ต</span> ครบวงจร<br />
+          บ้าน คอนโด วิลล่า สำนักงาน
+        </h1>
+        <p class="mt-3 text-sm font-semibold uppercase tracking-wide text-brand-500">Professional Cleaning &amp; Maid Service in Phuket</p>
+        <p class="mt-4 max-w-xl leading-relaxed text-ink-600">
+          แม่บ้านรายชั่วโมงเริ่ม 250 บาท/ชม. Deep Cleaning ซักโซฟา-ที่นอนระบบไอน้ำฆ่าเชื้อ
+          ขัดพื้นหินอ่อน — ทีมงานผ่านการอบรม ตรวจประวัติอาชญากรรมทุกคน พร้อมประกันความเสียหาย 100,000 บาท
+        </p>
+
+        <ul class="mt-6 grid max-w-xl grid-cols-2 gap-x-6 gap-y-3 text-sm font-semibold sm:grid-cols-4">
+          {[
+            'ตรวจประวัติตำรวจ',
+            'ประกัน 100,000 บ.',
+            'พร้อมอุปกรณ์-น้ำยา',
+            'Thai & English',
+          ].map((t) => (
+            <li class="flex items-center gap-1.5">
+              <svg class="h-4 w-4 shrink-0 text-line-600" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9.5 16.2 5.3 12l-1.4 1.4 5.6 5.6 12-12-1.4-1.4-10.6 10.6Z"/></svg>
+              {t}
+            </li>
+          ))}
+        </ul>
+
+        <CtaButtons class="mt-7" />
+        <p class="mt-3 text-xs text-ink-600">{SITE.openingHours} — ตอบไวทั้งโทรและ LINE</p>
+      </div>
+
+      <div class="relative">
+        <img
+          src="/images/team-window-cleaning-phuket.webp"
+          srcset="/images/team-window-cleaning-phuket-800.webp 800w, /images/team-window-cleaning-phuket.webp 1200w"
+          sizes="(min-width: 1024px) 45vw, 100vw"
+          alt="ทีมแม่บ้าน Phuket Maid Service กำลังทำความสะอาดกระจกอาคารในภูเก็ต"
+          class="aspect-[4/5] w-full rounded-2xl object-cover shadow-card-hover sm:aspect-[4/3] lg:aspect-[4/4.4]"
+          width="800"
+          height="880"
+          fetchpriority="high"
+        />
+        <div class="absolute -bottom-4 left-4 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-card-hover">
+          <span class="rounded-full bg-line-600/10 p-2 text-line-600">
+            <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4L16.2 10l-5.4 5.6Z"/></svg>
+          </span>
+          <span>
+            <span class="block text-sm font-extrabold text-navy-900">ประกันความเสียหาย</span>
+            <span class="block text-xs text-ink-600">วงเงิน 100,000 บาท ทุกงาน</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-white py-16 md:py-24" aria-labelledby="services-title">
+    <div class="mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow="Our Services" title="บริการของเรา" />
+      <p class="mx-auto mt-4 max-w-2xl text-center text-sm leading-relaxed text-ink-600">
+        เลือกบริการทำความสะอาดที่ต้องการ ทุกงานมีทีมแม่บ้านมืออาชีพพร้อมอุปกรณ์และน้ำยามาตรฐาน
+      </p>
+
+      <div class="mt-12 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        {services.map((s) => (
+          <article class="group flex flex-col overflow-hidden rounded-2xl border border-brand-50 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
+            <a href={s.href} class="relative block" aria-label={s.title}>
+              <img src={s.img} alt={s.alt} class="aspect-[16/10] w-full object-cover" width="640" height="400" loading="lazy" />
+              <span class="absolute -bottom-6 left-1/2 -translate-x-1/2 rounded-full border-4 border-white bg-brand-600 p-3 text-white shadow-card">
+                <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={s.icon} /></svg>
+              </span>
+            </a>
+            <div class="flex flex-1 flex-col items-center px-5 pb-6 pt-9 text-center">
+              <h3 class="text-lg font-extrabold text-navy-900">
+                <a href={s.href} class="hover:text-brand-600">{s.title}</a>
+              </h3>
+              <p class="text-xs font-semibold uppercase tracking-wide text-brand-500">{s.en}</p>
+              <p class="mt-3 text-sm leading-relaxed text-ink-600">{s.desc}</p>
+              <a
+                href={s.href}
+                class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-brand-600 px-4 py-2 text-sm font-bold text-brand-600 transition group-hover:bg-brand-600 group-hover:text-white"
+              >
+                ดูรายละเอียด
+                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-12 text-center">
+        <a href="/pricing/" class="inline-flex items-center gap-2 rounded-lg bg-navy-900 px-7 py-3.5 font-bold text-white shadow-card transition hover:bg-navy-800">
+          ดูราคาทุกบริการ
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="bg-brand-50 py-16 md:py-24" aria-labelledby="about-title">
+    <div class="mx-auto grid max-w-6xl items-center gap-10 px-4 lg:grid-cols-2">
+      <img
+        src="/images/office-building-cleaning-phuket.webp"
+        alt="ทีมแม่บ้าน Phuket Maid Service ปฏิบัติงานทำความสะอาดอาคารในภูเก็ต"
+        class="aspect-[4/3] w-full rounded-2xl object-cover shadow-card-hover"
+        width="800"
+        height="600"
+        loading="lazy"
+      />
+      <div>
+        <SectionHeading eyebrow="About Us" title="เกี่ยวกับเรา" center={false} />
+        <p class="mt-5 leading-relaxed text-ink-600">
+          Phuket Maid Service (บริษัท ภูอันดา จำกัด) คือผู้ให้บริการทำความสะอาดครบวงจรในจังหวัดภูเก็ต
+          และเป็นเจ้าแรกที่เปิดให้จองแม่บ้านออนไลน์ เราดูแลทั้งบ้านพักอาศัย คอนโด พูลวิลล่า
+          ที่พัก Airbnb โรงแรม รีสอร์ท และสำนักงาน ด้วยทีมแม่บ้านที่ผ่านการอบรม
+          และตรวจประวัติอาชญากรรมจากสำนักงานตำรวจทุกคน พร้อมประกันความเสียหายวงเงิน 100,000 บาท
+          รองรับลูกค้าทั้งชาวไทยและต่างชาติ
+        </p>
+        <dl class="mt-8 grid grid-cols-2 gap-5">
+          {stats.map((st) => (
+            <div class="rounded-2xl bg-white p-4 text-center shadow-card">
+              <dt class="sr-only">{st.small}</dt>
+              <dd class="text-xl font-extrabold text-brand-600">{st.big}</dd>
+              <dd class="mt-1 text-xs leading-relaxed text-ink-600">{st.small}</dd>
+            </div>
+          ))}
+        </dl>
+        <a href="/contact/" class="mt-8 inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 font-bold text-white shadow-card transition hover:bg-brand-700">
+          ติดต่อสอบถาม
+          <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="relative bg-navy-900 py-16 md:py-20" aria-labelledby="why-title">
+    <div class="mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow="Why Choose Us" title="ทำไมต้องเลือกเรา" light />
+      <ul class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
+        {whyUs.map((w) => (
+          <li class="flex flex-col items-center gap-3 text-center">
+            <span class="rounded-full border border-white/20 bg-white/10 p-4 text-white">
+              <svg class="h-7 w-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d={w.icon} /></svg>
+            </span>
+            <h3 class="text-sm font-bold text-white">{w.title}</h3>
+            <p class="text-xs leading-relaxed text-brand-100/80">{w.desc}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- Our work -->
+  <section class="bg-white py-16 md:py-24" aria-labelledby="work-title">
+    <div class="mx-auto max-w-6xl px-4">
+      <SectionHeading eyebrow="Our Work" title="ผลงานของเรา" />
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {works.map((w) => (
+          <figure class="overflow-hidden rounded-2xl border border-brand-50 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover">
+            <img src={w.img} alt={w.alt} class="aspect-[16/11] w-full object-cover" width="640" height="440" loading="lazy" />
+            <figcaption class="px-4 py-3 text-center text-sm font-bold text-navy-900">{w.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <Testimonials />
+
+  <CtaSection />
+</BaseLayout>
