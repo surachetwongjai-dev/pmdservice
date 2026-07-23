@@ -1,0 +1,139 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import { SITE } from '../../lib/site';
+import { t } from '../../lib/i18n';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const L = t('en');
+const crumbs = [{ label: 'Home', href: '/en/' }, { label: 'Contact' }];
+const mapQuery = encodeURIComponent('Baan Udomsuk, Pa Khlok, Thalang, Phuket 83110');
+---
+
+<BaseLayout
+  title="Contact Us — Book a Maid in Phuket +66 61 965 6292 | Phuket Maid Service"
+  description="Contact Phuket Maid Service to book cleaning and maids. Call +66 61 965 6292, LINE: phu-andatravel. Open daily 08:00–18:00, serving all of Phuket, in Thai and English."
+  schema={[breadcrumbSchema(crumbs)]}
+  altUrl="/contact/"
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">Contact us / book a clean</h1>
+      <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-ink-600">
+        The fastest way to reach us is by phone or LINE — {L.contactPerson} replies to every message. {L.openingHours}.
+      </p>
+      <CtaButtons class="mt-6 justify-center" />
+    </div>
+  </section>
+
+  <section class="bg-white py-12 md:py-16">
+    <div class="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-[1fr_1.1fr]">
+      <!-- Contact info -->
+      <div class="space-y-5">
+        <h2 class="text-2xl font-extrabold text-navy-900">All the ways to reach us</h2>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-brand-50 p-2.5 text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg></span>
+            <span><strong class="block text-navy-900">Phone / WhatsApp</strong>
+              <a href={`tel:${SITE.phoneIntl}`} class="text-brand-600 hover:underline">+66 61 965 6292</a> ({L.contactPerson})
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-brand-50 p-2.5 text-line-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6s6-3.5 8.2-6C21.7 14.4 22 12.8 22 11c0-4.4-4.5-8-10-8Z"/></svg></span>
+            <span><strong class="block text-navy-900">LINE (best — send photos for a quote)</strong>
+              ID: <a href={SITE.lineUrl} target="_blank" rel="noopener" class="text-brand-600 hover:underline">{SITE.lineId}</a>
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-brand-50 p-2.5 text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5-8-5V6l8 5 8-5v2Z"/></svg></span>
+            <span><strong class="block text-navy-900">Email</strong>
+              <a href={`mailto:${SITE.email}`} class="text-brand-600 hover:underline">{SITE.email}</a>
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-brand-50 p-2.5 text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg></span>
+            <span><strong class="block text-navy-900">Facebook</strong>
+              <a href={SITE.facebook} target="_blank" rel="noopener" class="text-brand-600 hover:underline">facebook.com/cleaner8</a>
+            </span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="rounded-full bg-brand-50 p-2.5 text-brand-600"><svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg></span>
+            <span><strong class="block text-navy-900">Office address</strong>
+              112/96 Baan Udomsuk, Moo 8, Soi 5, Pa Khlok, Thalang, Phuket 83110
+              <span class="mt-1 block text-xs text-ink-600">Opening hours: {L.openingHours}</span>
+            </span>
+          </li>
+        </ul>
+
+        <iframe
+          src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+          class="h-64 w-full rounded-2xl border border-brand-100 shadow-card"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Phuket Maid Service office map, Pa Khlok, Thalang, Phuket"
+        ></iframe>
+      </div>
+
+      <!-- Quote form -->
+      <div class="rounded-2xl border border-brand-100 bg-brand-50/50 p-6 shadow-card md:p-8">
+        <h2 class="text-2xl font-extrabold text-navy-900">Request a quote</h2>
+        <p class="mt-2 text-sm text-ink-600">Fill in a few details and our team will get back to you within business hours (sent to {SITE.email}).</p>
+
+        <form action={`https://formsubmit.co/${SITE.email}`} method="POST" class="mt-6 space-y-4">
+          <input type="hidden" name="_subject" value="New quote request from phuketmaidservice.com (EN)" />
+          <input type="hidden" name="_next" value="https://phuketmaidservice.com/en/thank-you/" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" class="hidden" tabindex="-1" autocomplete="off" />
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <label class="block text-sm font-semibold text-navy-900">
+              Name *
+              <input type="text" name="Name" required class="mt-1.5 w-full rounded-lg border border-brand-100 bg-white px-3.5 py-2.5 text-sm font-normal outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100" placeholder="Your name" />
+            </label>
+            <label class="block text-sm font-semibold text-navy-900">
+              Phone / LINE *
+              <input type="text" name="Phone or LINE" required class="mt-1.5 w-full rounded-lg border border-brand-100 bg-white px-3.5 py-2.5 text-sm font-normal outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100" placeholder="e.g. +66 8x-xxx-xxxx" />
+            </label>
+          </div>
+
+          <label class="block text-sm font-semibold text-navy-900">
+            Service *
+            <select name="Service" required class="mt-1.5 w-full rounded-lg border border-brand-100 bg-white px-3.5 py-2.5 text-sm font-normal outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100">
+              <option value="">— Choose a service —</option>
+              <option>Hourly / daily / monthly maid</option>
+              <option>Deep Cleaning / Big Cleaning</option>
+              <option>Sofa / mattress / curtain cleaning</option>
+              <option>Marble polishing / sandwash</option>
+              <option>Building window cleaning</option>
+              <option>Other (describe below)</option>
+            </select>
+          </label>
+
+          <label class="block text-sm font-semibold text-navy-900">
+            Area / district
+            <input type="text" name="Area" class="mt-1.5 w-full rounded-lg border border-brand-100 bg-white px-3.5 py-2.5 text-sm font-normal outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100" placeholder="e.g. Patong, Cherng Talay, Phuket Town" />
+          </label>
+
+          <label class="block text-sm font-semibold text-navy-900">
+            Job details
+            <textarea name="Details" rows="4" class="mt-1.5 w-full rounded-lg border border-brand-100 bg-white px-3.5 py-2.5 text-sm font-normal outline-none transition focus:border-brand-600 focus:ring-2 focus:ring-brand-100" placeholder="e.g. 1-bedroom condo, deep clean before move-in, weekends preferred"></textarea>
+          </label>
+
+          <label class="flex items-start gap-2 text-xs text-ink-600">
+            <input type="checkbox" required class="mt-0.5 accent-brand-600" />
+            I agree to be contacted per the <a href="/en/privacy-policy/" class="font-bold text-brand-600 underline">privacy policy</a>.
+          </label>
+
+          <button type="submit" class="w-full rounded-lg bg-brand-600 py-3.5 text-base font-bold text-white shadow-card transition hover:bg-brand-700">
+            Send quote request
+          </button>
+          <p class="text-center text-xs text-ink-600">In a hurry? Call <a href={`tel:${SITE.phoneIntl}`} class="font-bold text-brand-600">+66 61 965 6292</a> — it's faster.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

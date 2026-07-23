@@ -5,6 +5,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import MobileCtaBar from '../components/MobileCtaBar.astro';
 import { SITE } from '../lib/site';
+import { type Locale } from '../lib/i18n';
 
 interface Props {
   title: string;
@@ -16,11 +17,17 @@ interface Props {
   keywords?: string;
   /** true = ใส่ noindex (เช่น หน้า thank-you) */
   noindex?: boolean;
+  /** URL ของหน้านี้ในอีกภาษา (ไม่มีหน้าคู่ = fallback หน้าแรกอีกภาษาใน Header) */
+  altUrl?: string;
 }
 
-const { title, description, ogImage = '/images/team-window-cleaning-phuket.webp', schema = [], keywords, noindex = false } = Astro.props;
+const { title, description, ogImage = '/images/team-window-cleaning-phuket.webp', schema = [], keywords, noindex = false, altUrl } = Astro.props;
+const locale = (Astro.currentLocale ?? 'th') as Locale;
 const canonical = new URL(Astro.url.pathname, SITE.domain).href;
 const ogImageAbs = new URL(ogImage, SITE.domain).href;
+const ogLocale = locale === 'en' ? 'en_US' : 'th_TH';
+// hreflang alternate — ใส่เมื่อมีหน้าคู่จริง (altUrl)
+const altAbs = altUrl ? new URL(altUrl, SITE.domain).href : null;
 
 const localBusiness = {
   '@context': 'https://schema.org',
@@ -55,7 +62,7 @@ const jsonLd = [localBusiness, ...schema];
 ---
 
 <!doctype html>
-<html lang="th">
+<html lang={locale}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -64,6 +71,8 @@ const jsonLd = [localBusiness, ...schema];
     {keywords && <meta name="keywords" content={keywords} />}
     {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
+    {altAbs && <link rel="alternate" hreflang={locale === 'en' ? 'th' : 'en'} href={altAbs} />}
+    {altAbs && <link rel="alternate" hreflang={locale} href={canonical} />}
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -72,7 +81,7 @@ const jsonLd = [localBusiness, ...schema];
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={SITE.name} />
-    <meta property="og:locale" content="th_TH" />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
@@ -101,7 +110,7 @@ const jsonLd = [localBusiness, ...schema];
     <!-- GTM noscript — ปลด comment พร้อมด้านบน
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     -->
-    <Header />
+    <Header altUrl={altUrl} />
     <main>
       <slot />
     </main>

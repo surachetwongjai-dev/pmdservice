@@ -23,6 +23,10 @@ const links = [
       <p class="mx-auto mt-4 max-w-md leading-relaxed text-ink-600">
         ไม่พบหน้าที่คุณกำลังหา อาจถูกย้ายหรือลบไปแล้ว — ลองเลือกจากบริการยอดนิยมด้านล่าง
       </p>
+      <p class="mx-auto mt-2 max-w-md text-sm leading-relaxed text-ink-600">
+        Page not found. It may have moved or been removed — pick a popular service below, or
+        <a href="/en/" class="font-bold text-brand-600 underline">go to the English home page</a>.
+      </p>
       <div class="mt-8 flex flex-wrap justify-center gap-3">
         {links.map((l) => (
           <a href={l.href} class="rounded-lg border border-brand-100 bg-white px-4 py-2.5 text-sm font-bold text-navy-900 shadow-card transition hover:-translate-y-0.5 hover:text-brand-600 hover:shadow-card-hover">{l.label}</a>

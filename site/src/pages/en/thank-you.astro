@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+---
+
+<BaseLayout
+  title="Thank You — We've Received Your Message | Phuket Maid Service"
+  description="Thanks for contacting Phuket Maid Service. Our team will get back to you within business hours, 08:00–18:00 daily."
+  noindex
+  altUrl="/thank-you/"
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white py-20 md:py-28">
+    <div class="mx-auto max-w-2xl px-4 text-center">
+      <span class="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-line-600/10 text-line-600">
+        <svg class="h-10 w-10" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm-1.2 14.4-3.8-3.8 1.4-1.4 2.4 2.4 5.2-5.2 1.4 1.4-6.6 6.6Z"/></svg>
+      </span>
+      <h1 class="mt-6 text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">Thank you — we've got your message</h1>
+      <p class="mx-auto mt-4 max-w-lg leading-relaxed text-ink-600">
+        Our team will get back to you within business hours (open daily 08:00–18:00).
+        For a faster reply, call or message us on LINE.
+      </p>
+      <CtaButtons class="mt-8 justify-center" />
+      <a href="/en/" class="mt-6 inline-block text-sm font-bold text-brand-600 hover:underline">← Back to home</a>
+    </div>
+  </section>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'form_submit_success', page_path: '/en/thank-you/' });
+  </script>
+</BaseLayout>

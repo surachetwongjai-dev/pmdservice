@@ -1,9 +1,22 @@
 ---
-import { SITE, NAV } from '../lib/site';
+import { SITE } from '../lib/site';
+import { t, otherLocale, localeHome, type Locale } from '../lib/i18n';
 import Logo from './Logo.astro';
 
+interface Props {
+  /** URL ของหน้านี้ในอีกภาษา (ถ้าไม่มีหน้าคู่ ให้ fallback เป็นหน้าแรกอีกภาษา) */
+  altUrl?: string;
+}
+const { altUrl } = Astro.props;
+
+const locale = (Astro.currentLocale ?? 'th') as Locale;
+const L = t(locale);
+const other = otherLocale(locale);
+const switchUrl = altUrl ?? localeHome(other);
+
 const path = Astro.url.pathname;
-const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const isActive = (href: string) =>
+  href === '/' || href === '/en/' ? path === href : path.startsWith(href);
 ---
 
 <!-- Top bar -->
@@ -11,7 +24,7 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
     <p class="flex items-center gap-1.5 truncate">
       <svg class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-      ให้บริการทั่วจังหวัดภูเก็ต ทีมแม่บ้านตรวจประวัติแล้วทุกคน
+      {L.topbarNote}
     </p>
     <div class="flex shrink-0 items-center gap-4">
       <a href={`tel:${SITE.phoneIntl}`} class="flex items-center gap-1.5 hover:text-brand-100">
@@ -22,9 +35,22 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
         <span class="rounded bg-line-600 px-1.5 py-0.5 text-[10px] font-bold leading-none">LINE</span>
         {SITE.lineId}
       </a>
-      <a href={SITE.facebook} target="_blank" rel="noopener" aria-label="Facebook Phuket Maid Service" class="hidden hover:text-brand-100 sm:block">
-        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg>
-      </a>
+      <!-- Language switcher -->
+      <div class="flex items-center gap-1 border-l border-white/20 pl-3 font-semibold" aria-label="Language / ภาษา">
+        <a
+          href={locale === 'th' ? path : switchUrl}
+          hreflang="th"
+          class:list={['rounded px-1.5 py-0.5 transition', locale === 'th' ? 'bg-white/15 text-white' : 'text-brand-100 hover:text-white']}
+          aria-current={locale === 'th' ? 'true' : undefined}
+        >ไทย</a>
+        <span class="text-white/30" aria-hidden="true">|</span>
+        <a
+          href={locale === 'en' ? path : switchUrl}
+          hreflang="en"
+          class:list={['rounded px-1.5 py-0.5 transition', locale === 'en' ? 'bg-white/15 text-white' : 'text-brand-100 hover:text-white']}
+          aria-current={locale === 'en' ? 'true' : undefined}
+        >EN</a>
+      </div>
     </div>
   </div>
 </div>
@@ -32,16 +58,16 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
 <!-- Main header -->
 <header class="sticky top-0 z-40 border-b border-brand-50 bg-white/95 shadow-sm backdrop-blur">
   <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-    <a href="/" class="flex items-center gap-2.5" aria-label="Phuket Maid Service หน้าแรก">
+    <a href={localeHome(locale)} class="flex items-center gap-2.5" aria-label="Phuket Maid Service">
       <Logo class="h-10 w-10" />
       <span class="leading-tight">
         <span class="block text-lg font-extrabold tracking-tight text-navy-900">PHUKET <span class="text-brand-600">MAID SERVICE</span></span>
-        <span class="block text-[11px] text-ink-600">บริการทำความสะอาดครบวงจร ภูเก็ต</span>
+        <span class="block text-[11px] text-ink-600">{L.logoTagline}</span>
       </span>
     </a>
 
-    <nav class="hidden items-center gap-6 lg:flex" aria-label="เมนูหลัก">
-      {NAV.map((item) => (
+    <nav class="hidden items-center gap-6 lg:flex" aria-label="Main menu">
+      {L.nav.map((item) => (
         <a
           href={item.href}
           class:list={[
@@ -62,19 +88,19 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
         rel="noopener"
         class="hidden whitespace-nowrap rounded-lg bg-line-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-line-700 md:inline-flex"
       >
-        แอด LINE จองคิว
+        {L.ctaLineNav}
       </a>
       <a
         href={`tel:${SITE.phoneIntl}`}
         class="hidden whitespace-nowrap rounded-lg bg-brand-600 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-brand-700 md:inline-flex"
       >
-        โทร {SITE.phoneDisplay}
+        {L.ctaCallNav} {SITE.phoneDisplay}
       </a>
       <button
         id="menu-toggle"
         type="button"
         class="rounded-lg border border-brand-100 p-2 text-navy-900 lg:hidden"
-        aria-label="เปิดเมนู"
+        aria-label={L.openMenu}
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
@@ -84,9 +110,9 @@ const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWit
   </div>
 
   <!-- Mobile menu -->
-  <nav id="mobile-menu" class="hidden border-t border-brand-50 bg-white lg:hidden" aria-label="เมนูมือถือ">
+  <nav id="mobile-menu" class="hidden border-t border-brand-50 bg-white lg:hidden" aria-label="Mobile menu">
     <div class="mx-auto max-w-6xl space-y-1 px-4 py-3">
-      {NAV.map((item) => (
+      {L.nav.map((item) => (
         <a
           href={item.href}
           class:list={[

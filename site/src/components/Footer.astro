@@ -1,36 +1,27 @@
 ---
 import { SITE } from '../lib/site';
+import { t, localeHome, type Locale } from '../lib/i18n';
 import Logo from './Logo.astro';
 
+const locale = (Astro.currentLocale ?? 'th') as Locale;
+const L = t(locale);
 const year = new Date().getFullYear();
-const services = [
-  { label: 'แม่บ้านรายชั่วโมง / รายวัน', href: '/services/maid-hourly-phuket/' },
-  { label: 'ซักโซฟา ที่นอน ผ้าม่าน ไอน้ำฆ่าเชื้อ', href: '/services/sofa-cleaning-phuket/' },
-  { label: 'ขัดพื้นหินอ่อน กระเบื้อง', href: '/services/marble-polishing-phuket/' },
-  { label: 'Deep Cleaning บ้าน คอนโด', href: '/services/deep-cleaning-phuket/' },
-];
-const quickLinks = [
-  { label: 'หน้าแรก', href: '/' },
-  { label: 'ราคาบริการ', href: '/pricing/' },
-  { label: 'ติดต่อเรา', href: '/contact/' },
-  { label: 'นโยบายความเป็นส่วนตัว', href: '/privacy-policy/' },
-];
+// TODO(i18n): เมื่อแปลหน้า location เป็น EN แล้ว เปลี่ยนเป็น locale === 'en' ? '/en' : ''
+// ตอนนี้หน้า location มีเฉพาะไทย จึงชี้ TH ทั้งสองภาษา เพื่อไม่ให้ลิงก์เสีย
+const areaPrefix = '';
 ---
 
 <footer class="bg-navy-900 pb-24 text-brand-100 md:pb-0">
   <div class="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:grid-cols-2 lg:grid-cols-4">
     <div>
-      <a href="/" class="flex items-center gap-2.5" aria-label="Phuket Maid Service หน้าแรก">
+      <a href={localeHome(locale)} class="flex items-center gap-2.5" aria-label="Phuket Maid Service">
         <Logo class="h-11 w-11" />
         <span class="leading-tight">
           <span class="block text-base font-extrabold text-white">PHUKET MAID SERVICE</span>
           <span class="block text-[11px] text-brand-100/80">{SITE.legalName}</span>
         </span>
       </a>
-      <p class="mt-4 text-sm leading-relaxed text-brand-100/80">
-        บริการทำความสะอาดครบวงจรในภูเก็ต เจ้าแรกที่ให้บริการจองแม่บ้านออนไลน์
-        แม่บ้านผ่านการอบรมและตรวจประวัติอาชญากรรมทุกคน พร้อมประกันความเสียหายวงเงิน 100,000 บาท
-      </p>
+      <p class="mt-4 text-sm leading-relaxed text-brand-100/80">{L.footerAbout}</p>
       <div class="mt-4 flex gap-3">
         <a href={SITE.facebook} target="_blank" rel="noopener" aria-label="Facebook" class="rounded-full bg-white/10 p-2 transition hover:bg-white/20">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.2c-1.2 0-1.6.8-1.6 1.6V12h2.7l-.4 2.9h-2.3v7A10 10 0 0 0 22 12Z"/></svg>
@@ -41,66 +32,54 @@ const quickLinks = [
       </div>
     </div>
 
-    <nav aria-label="เมนูด่วน">
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">เมนูด่วน</h2>
+    <nav aria-label={L.footerQuick}>
+      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">{L.footerQuick}</h2>
       <ul class="space-y-2.5 text-sm">
-        {quickLinks.map((l) => (
+        {L.footerQuickLinks.map((l) => (
           <li><a href={l.href} class="transition hover:text-white">{l.label}</a></li>
         ))}
       </ul>
     </nav>
 
-    <nav aria-label="บริการของเรา">
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">บริการของเรา</h2>
+    <nav aria-label={L.footerServices}>
+      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">{L.footerServices}</h2>
       <ul class="space-y-2.5 text-sm">
-        {services.map((l) => (
+        {L.footerServiceLinks.map((l) => (
           <li><a href={l.href} class="transition hover:text-white">{l.label}</a></li>
         ))}
       </ul>
     </nav>
 
     <div>
-      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">ติดต่อเรา</h2>
+      <h2 class="mb-4 text-sm font-bold uppercase tracking-wider text-white">{L.footerContact}</h2>
       <ul class="space-y-3 text-sm">
         <li>
           <a href={`tel:${SITE.phoneIntl}`} class="flex items-center gap-2 font-semibold text-white hover:text-brand-100">
             <svg class="h-4 w-4 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg>
-            {SITE.phoneDisplay} ({SITE.contactPerson})
+            {SITE.phoneDisplay} ({L.contactPerson})
           </a>
         </li>
         <li>LINE ID: <a href={SITE.lineUrl} target="_blank" rel="noopener" class="underline hover:text-white">{SITE.lineId}</a></li>
         <li>WhatsApp: <a href={SITE.whatsapp} target="_blank" rel="noopener" class="underline hover:text-white">+66 61 965 6292</a></li>
         <li><a href={`mailto:${SITE.email}`} class="hover:text-white">{SITE.email}</a></li>
         <li class="leading-relaxed">{SITE.address.full}</li>
-        <li class="font-semibold text-white">เวลาทำการ: {SITE.openingHours}</li>
+        <li class="font-semibold text-white">{L.footerHoursLabel}: {L.openingHours}</li>
       </ul>
     </div>
   </div>
 
   <div class="border-t border-white/10">
-    <nav class="mx-auto max-w-6xl px-4 py-4 text-center text-xs leading-relaxed text-brand-100/80" aria-label="พื้นที่ให้บริการ">
-      <span class="font-bold text-white">พื้นที่ให้บริการ:</span>
-      {[
-        ['ป่าตอง', 'patong'],
-        ['กะตะ', 'kata'],
-        ['กะรน', 'karon'],
-        ['ราไวย์', 'rawai'],
-        ['เชิงทะเล', 'cherngtalay'],
-        ['บางเทา', 'bangtao'],
-        ['กมลา', 'kamala'],
-        ['ฉลอง', 'chalong'],
-        ['ภูเก็ตทาวน์', 'phuket-town'],
-        ['ไม้ขาว', 'maikhao'],
-        ['ในยาง', 'naiyang'],
-      ].map(([label, slug], i) => (
+    <nav class="mx-auto max-w-6xl px-4 py-4 text-center text-xs leading-relaxed text-brand-100/80" aria-label={L.footerAreasLabel}>
+      <span class="font-bold text-white">{L.footerAreasLabel}:</span>
+      {L.areaNames.map((a, i) => (
         <>
           {i > 0 && <span aria-hidden="true"> · </span>}
-          <a href={`/locations/${slug}/`} class="hover:text-white hover:underline">{label}</a>
+          <a href={`${areaPrefix}/locations/${a.slug}/`} class="hover:text-white hover:underline">{a.label}</a>
         </>
       ))}
     </nav>
     <p class="mx-auto max-w-6xl border-t border-white/10 px-4 py-5 text-center text-xs text-brand-100/70">
-      © {year} {SITE.name} — {SITE.legalName} สงวนลิขสิทธิ์ | บริการทำความสะอาด แม่บ้าน ภูเก็ต
+      © {year} {SITE.name} — {SITE.legalName} {L.rights}
     </p>
   </div>
 </footer>

@@ -26,6 +26,8 @@ for (const page of pages) {
     const clean = url.split('#')[0].split('?')[0];
     if (checked.has(clean)) continue;
     checked.add(clean);
+    // 404 เป็นหน้า catch-all (เสิร์ฟ 404.html สำหรับ path ที่ไม่พบ) — ถือว่าใช้ได้
+    if (clean === '/404/' || clean === '/404') continue;
     const asFile = join(DIST, clean);
     const asIndex = join(DIST, clean, 'index.html');
     if (!existsSync(asFile) || (statSync(asFile).isDirectory() && !existsSync(asIndex))) {

@@ -1,0 +1,97 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE } from '../../lib/site';
+import { t } from '../../lib/i18n';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const L = t('en');
+const crumbs = [{ label: 'Home', href: '/en/' }, { label: 'Privacy Policy' }];
+---
+
+<BaseLayout
+  title="Privacy Policy (PDPA) | Phuket Maid Service"
+  description="Privacy policy for Phuket Maid Service (Phu Anda Co., Ltd.) under Thailand's Personal Data Protection Act (PDPA), covering how we collect, use and protect your data."
+  schema={[breadcrumbSchema(crumbs)]}
+  altUrl="/privacy-policy/"
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-3xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-3xl px-4 pb-8 pt-6">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">Privacy Policy</h1>
+      <p class="mt-3 text-sm text-ink-600">Last updated: July 2026</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-10">
+    <div class="mx-auto max-w-3xl space-y-8 px-4 text-[15px] leading-relaxed text-ink-600">
+      <p>
+        {SITE.name}, operated by {SITE.legalName} ("the Company", "we"), values the protection of the personal
+        data of everyone who uses phuketmaidservice.com and of our customers. This policy is prepared in
+        accordance with Thailand's Personal Data Protection Act B.E. 2562 (PDPA) and explains how we collect,
+        use and disclose your personal data.
+      </p>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">1. Data we collect</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6">
+          <li><strong class="text-navy-900">Information you provide directly:</strong> name, phone number, LINE ID, email, service address/area and job details submitted via our contact form or shared by phone, LINE, WhatsApp and Facebook.</li>
+          <li><strong class="text-navy-900">Website usage data:</strong> technical data such as IP address, browser type and pages visited, via cookies and analytics/advertising tools (e.g. Google Analytics, Google Ads) to improve our service and measure advertising.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">2. How we use your data</h2>
+        <ul class="mt-3 list-disc space-y-2 pl-6">
+          <li>To contact you, provide quotes, schedule and deliver the cleaning services you request.</li>
+          <li>To issue quotations, invoices and related accounting documents.</li>
+          <li>To improve the quality of our service, website and advertising performance.</li>
+          <li>To comply with applicable laws.</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">3. Disclosure of data</h2>
+        <p class="mt-3">
+          We do not sell or rent your personal data. Data may be disclosed only to (a) our service team as
+          necessary to perform the work, (b) service providers we use, such as the email delivery service behind
+          our contact form, and (c) government authorities where required by law.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">4. Cookies</h2>
+        <p class="mt-3">
+          This website may use cookies for site functionality, usage analytics and Google Ads measurement. You can
+          configure your browser to reject cookies, though some site features may not work fully.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">5. Retention and security</h2>
+        <p class="mt-3">
+          We retain personal data only as long as necessary for the purposes above or as required by law, and we
+          apply appropriate security measures to prevent unauthorised access, use or disclosure.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="text-xl font-extrabold text-navy-900">6. Your rights</h2>
+        <p class="mt-3">Under the PDPA you have the right to access, obtain a copy of, rectify, erase, restrict and object to the processing of your personal data, and to withdraw consent, by contacting us via the channels below.</p>
+      </div>
+
+      <div class="rounded-2xl border border-brand-100 bg-brand-50/60 p-5">
+        <h2 class="text-xl font-extrabold text-navy-900">7. Contact — data controller</h2>
+        <p class="mt-3">
+          {SITE.legalName}<br />
+          112/96 Baan Udomsuk, Moo 8, Soi 5, Pa Khlok, Thalang, Phuket 83110<br />
+          Tel: <a href={`tel:${SITE.phoneIntl}`} class="font-bold text-brand-600">+66 61 965 6292</a> |
+          Email: <a href={`mailto:${SITE.email}`} class="font-bold text-brand-600">{SITE.email}</a><br />
+          Opening hours: {L.openingHours}
+        </p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

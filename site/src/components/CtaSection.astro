@@ -1,14 +1,14 @@
 ---
 import CtaButtons from './CtaButtons.astro';
+import { t, type Locale } from '../lib/i18n';
 
 interface Props {
   title?: string;
   subtitle?: string;
 }
-const {
-  title = 'พร้อมให้บริการทั่วภูเก็ต จองคิววันนี้',
-  subtitle = 'โทรหรือแอด LINE รับใบเสนอราคาฟรี ไม่มีข้อผูกมัด — ทีมงานตอบทั้งภาษาไทยและอังกฤษ',
-} = Astro.props;
+const locale = (Astro.currentLocale ?? 'th') as Locale;
+const L = t(locale);
+const { title = L.ctaTitle, subtitle = L.ctaSubtitle } = Astro.props;
 ---
 
 <section class="bg-gradient-to-r from-navy-900 to-brand-700 py-14 text-white">

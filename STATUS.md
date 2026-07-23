@@ -4,6 +4,19 @@
 > รอบ 1 (22 ก.ค. 2026): โครงเว็บ + หน้าแรก + 4 pillar + หน้ารอง
 > รอบ 2 (23 ก.ค. 2026): เพิ่มหน้า service ย่อย 22 หน้า + location 11 หน้า ครบตาม BRIEF ข้อ 7
 
+## อัปเดตรอบ 4 (23 ก.ค. 2026) — เพิ่มภาษาอังกฤษ (i18n) รอบแรก
+
+เปิดเว็บสองภาษา (ไทย/อังกฤษ) พร้อมปุ่มสลับภาษา — รอบนี้แปลหน้าหลัก + 4 บริการหลัก (เป้าหมายทั้งเว็บ ทยอยทำรอบถัดไป)
+
+- **ระบบ i18n (Astro)**: ไทยอยู่ root (`/`), อังกฤษอยู่ `/en/` — URL ไทยเดิมไม่เปลี่ยน (ไม่กระทบ SEO)
+- **ปุ่มสลับภาษา ไทย|EN** บน top bar ทุกหน้า — ชี้ไปหน้าคู่อีกภาษาเมื่อมี, หน้าที่ยังไม่แปล fallback ไปหน้าแรกอีกภาษา (ไม่มีลิงก์เสีย)
+- **UI/เมนู/ปุ่ม/footer สองภาษา**: Header, Footer, MobileCtaBar, CtaButtons, CtaSection, TrustBadges, Testimonials อ่าน `Astro.currentLocale` + dictionary กลางที่ `src/lib/i18n.ts`
+- **หน้า EN ที่แปลแล้ว (9 หน้า)**: หน้าแรก, ราคา, ติดต่อ (ฟอร์ม EN ส่ง `/en/thank-you/`), privacy (PDPA), thank-you, 404 (สองภาษา) + 4 pillar (maid-hourly, sofa, marble, deep-cleaning) เนื้อหา EN เต็ม
+- **content collections EN**: ไฟล์ `*.en.md` (ตั้ง `generateId` ให้คง `.en`), route `/en/services/[...slug]/` แยกจากไทย
+- **SEO 2 ภาษา**: `<html lang>`, `hreflang` alternate (th↔en) ในหน้าที่มีคู่, `og:locale` ตามภาษา, sitemap รวม `/en/` (i18n integration)
+- **ยอดหน้า: 51 หน้า** (42 ไทย + 9 อังกฤษ) — build ผ่าน, link check 104 URL ไม่เสีย, sitemap 48 URL
+- รอบถัดไป: แปล service ย่อย 21 + location 11 เป็น EN (โครง route/i18n พร้อมแล้ว เพิ่มไฟล์ `*.en.md` ได้เลย)
+
 ## อัปเดตรอบ 3 (23 ก.ค. 2026) — แก้ราคา/บริการตามลูกค้า
 
 - **แม่บ้านรายชั่วโมง 250 → 400 บาท/ชม.** ทุกหน้า (85 จุด) — คงขัดหินอ่อน/ทรายล้าง 250 บ./ตร.ม. ไว้ตามเดิม

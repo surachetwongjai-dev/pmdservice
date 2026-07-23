@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CtaButtons from '../../components/CtaButtons.astro';
+import CtaSection from '../../components/CtaSection.astro';
+import TrustBadges from '../../components/TrustBadges.astro';
+import { breadcrumbSchema } from '../../lib/schema';
+
+const crumbs = [{ label: 'Home', href: '/en/' }, { label: 'Pricing' }];
+
+// Prices from the client brief only; anything unlisted shows "Ask for a quote"
+const groups = [
+  {
+    title: 'Maid Cleaning',
+    href: '/en/services/maid-hourly-phuket/',
+    rows: [
+      { label: 'General cleaning (hourly)', price: '฿400/hr', note: 'Minimum 2 hours · excl. tax · supplies included' },
+      { label: 'Daily / weekly / monthly maid', price: 'Ask for a quote', note: 'Special rates for regular packages' },
+    ],
+  },
+  {
+    title: 'Deep Cleaning / Big Cleaning',
+    href: '/en/services/deep-cleaning-phuket/',
+    rows: [
+      { label: 'Big Cleaning package', price: 'From ฿4,000', note: 'Based on area and condition' },
+      { label: 'Post-construction / post-renovation', price: 'Ask for a quote', note: 'Assessed from photos or on-site' },
+    ],
+  },
+  {
+    title: 'Floor Polishing',
+    href: '/en/services/marble-polishing-phuket/',
+    rows: [
+      { label: 'Marble floor polishing', price: '฿250/sqm', note: 'Free trial patch before you decide' },
+      { label: 'Sandwash / wax coating', price: '฿100/sqm', note: 'For poolside, walkways, terraces' },
+    ],
+  },
+  {
+    title: 'Sofa, Mattress & Curtain (steam sanitising)',
+    href: '/en/services/sofa-cleaning-phuket/',
+    rows: [
+      { label: 'Sofa cleaning', price: 'From ฿1,000', note: 'Starting price, quoted by size and seats' },
+      { label: 'Mattress cleaning (dust-mite removal)', price: 'Ask for a quote', note: 'Priced by mattress size' },
+      { label: 'Curtain cleaning (no need to remove)', price: 'Ask for a quote', note: 'Steam-cleaned in place' },
+      { label: 'Carpet / office chairs', price: 'Ask for a quote', note: 'Special rate for multiple pieces' },
+    ],
+  },
+  {
+    title: 'Other Services',
+    href: '/en/contact/',
+    rows: [
+      { label: 'Building window cleaning', price: 'Ask for a quote', note: 'By area and height' },
+      { label: 'Hotel / resort / Airbnb / office cleaning', price: 'Ask for a quote', note: 'Monthly packages for businesses' },
+    ],
+  },
+];
+---
+
+<BaseLayout
+  title="Cleaning Prices in Phuket — All Services | Phuket Maid Service"
+  description="Phuket cleaning prices: hourly maids ฿400/hr, Big Cleaning from ฿4,000, sofa cleaning from ฿1,000, marble polishing ฿250/sqm. Clear pricing, no hidden fees. Call +66 61 965 6292."
+  schema={[breadcrumbSchema(crumbs)]}
+  altUrl="/pricing/"
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">Cleaning prices in Phuket</h1>
+      <p class="mx-auto mt-4 max-w-2xl leading-relaxed text-ink-600">
+        Clear prices agreed before every job, with no surprises on-site. For any item marked
+        "Ask for a quote", just send us a photo on LINE for a free estimate.
+      </p>
+      <CtaButtons class="mt-6 justify-center" />
+    </div>
+  </section>
+
+  <section class="bg-white py-12 md:py-16">
+    <div class="mx-auto max-w-4xl space-y-10 px-4">
+      {groups.map((g) => (
+        <div>
+          <div class="flex items-center justify-between gap-3">
+            <h2 class="text-xl font-extrabold text-navy-900 md:text-2xl">{g.title}</h2>
+            <a href={g.href} class="shrink-0 text-sm font-bold text-brand-600 hover:underline">Details →</a>
+          </div>
+          <div class="mt-4 overflow-hidden rounded-2xl border border-brand-100 shadow-card">
+            <table class="w-full text-sm">
+              <thead class="bg-navy-900 text-left text-white">
+                <tr>
+                  <th class="px-4 py-3 font-bold">Service</th>
+                  <th class="px-4 py-3 text-right font-bold">Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                {g.rows.map((row, i) => (
+                  <tr class:list={[i % 2 === 1 && 'bg-brand-50/60']}>
+                    <td class="px-4 py-3.5">
+                      <span class="font-semibold text-navy-900">{row.label}</span>
+                      {row.note && <span class="block text-xs text-ink-600">{row.note}</span>}
+                    </td>
+                    <td class="px-4 py-3.5 text-right font-extrabold text-brand-600">{row.price}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      ))}
+      <div class="rounded-2xl border border-brand-100 bg-brand-50 p-5 text-sm leading-relaxed text-ink-600">
+        <p class="mb-2 font-bold text-navy-900">Please note</p>
+        <ul class="space-y-1.5">
+          <li>• All prices exclude tax. Official quotes are issued under Phu Anda Co., Ltd.</li>
+          <li>• Hourly maid service has a 2-hour minimum per booking.</li>
+          <li>• For beachfront or areas far from town, a travel fee from ฿100–300 applies by distance.</li>
+          <li>• For items marked "Ask for a quote", send a photo on LINE for a free estimate.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-brand-50 bg-white pb-14">
+    <div class="mx-auto max-w-6xl px-4 pt-10">
+      <TrustBadges />
+    </div>
+  </section>
+
+  <CtaSection title="Want a price for your job? Send a photo for a free quote" subtitle="Message us on LINE with a photo of the job — we reply fast, in both Thai and English." />
+</BaseLayout>

@@ -1,15 +1,18 @@
 ---
 import { SITE } from '../lib/site';
+import { t, type Locale } from '../lib/i18n';
+const locale = (Astro.currentLocale ?? 'th') as Locale;
+const L = t(locale);
 ---
 
 <!-- แถบ CTA ติดจอล่างบนมือถือ (ข้อกำหนด Google Ads ข้อ 8.4) -->
-<div class="fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-px border-t border-brand-100 bg-white shadow-[0_-4px_16px_rgba(15,42,82,0.12)] md:hidden" role="navigation" aria-label="ติดต่อด่วน">
+<div class="fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-px border-t border-brand-100 bg-white shadow-[0_-4px_16px_rgba(15,42,82,0.12)] md:hidden" role="navigation" aria-label="Contact">
   <a href={`tel:${SITE.phoneIntl}`} class="flex items-center justify-center gap-2 bg-brand-600 py-3.5 text-base font-bold text-white active:bg-brand-700">
     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.58 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z"/></svg>
-    โทรเลย
+    {L.mobileCall}
   </a>
   <a href={SITE.lineUrl} target="_blank" rel="noopener" class="flex items-center justify-center gap-2 bg-line-600 py-3.5 text-base font-bold text-white active:bg-line-700">
     <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3C6.5 3 2 6.6 2 11.1c0 4 3.6 7.4 8.4 8 .3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.6s6-3.5 8.2-6C21.7 14.4 22 12.8 22 11c0-4.4-4.5-8-10-8Z"/></svg>
-    LINE จองคิว
+    {L.mobileLine}
   </a>
 </div>

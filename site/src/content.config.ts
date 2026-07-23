@@ -5,8 +5,11 @@ import { glob } from 'astro/loaders';
  * หน้า Service (/services/<slug>/) — เพิ่มหน้าใหม่ = เพิ่มไฟล์ .md ใน src/content/services/
  * เนื้อหา unique 400-600 คำเขียนใน body ของไฟล์ markdown
  */
+// คง id ตามชื่อไฟล์ (ไม่ slugify ทิ้งจุด) เพื่อให้ *.en.md ได้ id ลงท้าย ".en"
+const keepDotId = ({ entry }: { entry: string }) => entry.replace(/\.md$/, '');
+
 const services = defineCollection({
-  loader: glob({ pattern: ['**/*.md', '!**/_*.md'], base: './src/content/services' }),
+  loader: glob({ pattern: ['**/*.md', '!**/_*.md'], base: './src/content/services', generateId: keepDotId }),
   schema: z.object({
     title: z.string(), // H1 = บริการ + ภูเก็ต
     metaTitle: z.string(),
@@ -45,7 +48,7 @@ const services = defineCollection({
  * กัน doorway page: เนื้อหา body ต้องเป็นข้อมูลเฉพาะพื้นที่จริง ห้าม copy ข้ามหน้า
  */
 const locations = defineCollection({
-  loader: glob({ pattern: ['**/*.md', '!**/_*.md'], base: './src/content/locations' }),
+  loader: glob({ pattern: ['**/*.md', '!**/_*.md'], base: './src/content/locations', generateId: keepDotId }),
   schema: z.object({
     areaName: z.string(), // เช่น "ป่าตอง"
     title: z.string(), // H1 = บริการทำความสะอาด + แม่บ้าน ใน<พื้นที่>

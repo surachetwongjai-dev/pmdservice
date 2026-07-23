@@ -1,21 +1,24 @@
 ---
 import SectionHeading from './SectionHeading.astro';
+import { t, type Locale } from '../lib/i18n';
 
 // ห้ามสร้างรีวิวปลอมพร้อมชื่อคน (BRIEF ข้อ 10) — ใช้ placeholder รอรีวิวจริง
-const reviews = [
-  { text: '[รอรีวิวจริงจากลูกค้า — งานแม่บ้านรายชั่วโมง]', name: '[รอชื่อลูกค้า]', role: 'เจ้าของบ้าน' },
-  { text: '[รอรีวิวจริงจากลูกค้า — งานซักโซฟา/ที่นอน]', name: '[รอชื่อลูกค้า]', role: 'เจ้าของคอนโด' },
-  { text: '[รอรีวิวจริงจากลูกค้า — งาน Deep Cleaning / พูลวิลล่า]', name: '[รอชื่อลูกค้า]', role: 'Airbnb Host' },
-];
+const locale = (Astro.currentLocale ?? 'th') as Locale;
+const L = t(locale);
+const reviews = L.reviewRoles.map((role) => ({
+  text: L.reviewPending,
+  name: L.reviewNamePending,
+  role,
+}));
 ---
 
 <section class="bg-white py-16 md:py-24" aria-labelledby="reviews-title">
   <div class="mx-auto max-w-6xl px-4">
-    <SectionHeading eyebrow="Customer Testimonials" title="รีวิวจากลูกค้าของเรา" />
+    <SectionHeading eyebrow={L.reviewsEyebrow} title={L.reviewsTitle} />
     <div class="mt-10 grid gap-6 md:grid-cols-3">
       {reviews.map((r) => (
         <figure class="flex flex-col gap-4 rounded-2xl border border-brand-50 bg-white p-6 shadow-card">
-          <div class="flex gap-1 text-star-500" aria-label="5 ดาว">
+          <div class="flex gap-1 text-star-500" aria-label="5 stars">
             {Array.from({ length: 5 }).map(() => (
               <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 2.9 6.3 6.9.8-5.1 4.7 1.4 6.8L12 17.2l-6.1 3.4 1.4-6.8L2.2 9.1l6.9-.8L12 2Z"/></svg>
             ))}
