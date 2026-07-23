@@ -3,6 +3,14 @@ title: 'Sofa, Mattress & Curtain Cleaning in Phuket — Steam Sanitising'
 metaTitle: 'Sofa Cleaning Phuket from ฿1,000, Steam Sanitise | Phuket Maid Service'
 metaDescription: 'Sofa cleaning in Phuket from ฿1,000, plus mattress and curtain cleaning with hot-steam sanitising and pro extraction. Kills dust mites that trigger allergies. On-site across Phuket. Call +66 61 965 6292.'
 keywords: 'sofa cleaning phuket, mattress cleaning phuket, curtain cleaning phuket, steam cleaning phuket, dust mite removal phuket, upholstery cleaning phuket'
+offer:
+  price: 1000
+  unit: from
+coverage:
+  - { label: 'Sofa cleaning', href: '/en/services/sofa-cleaning-phuket/' }
+  - { label: 'Mattress cleaning', href: '/en/services/mattress-cleaning-phuket/' }
+  - { label: 'Curtain cleaning', href: '/en/services/curtain-cleaning-phuket/' }
+  - { label: 'Carpet cleaning', href: '/en/services/carpet-cleaning-phuket/' }
 heroImage: '/images/sofa-steam-cleaning-phuket.webp'
 heroImageAlt: 'Sofa cleaning in Phuket with a hot-steam sanitising extraction machine at home'
 heroVideo: '/videos/sofa-steam-extraction-phuket.mp4'

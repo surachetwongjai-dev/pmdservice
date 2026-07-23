@@ -1,0 +1,10 @@
+import { chromium } from 'playwright-core';
+const OUT = process.argv[2];
+const b = await chromium.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+const pg = await ctx.newPage();
+await pg.goto('http://localhost:4323/services/maid-hourly-phuket/', { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {});
+await pg.waitForTimeout(400);
+await pg.screenshot({ path: `${OUT}/pillar-maid-hero.png`, clip: { x: 0, y: 90, width: 1440, height: 620 } });
+console.log('done');
+await b.close();

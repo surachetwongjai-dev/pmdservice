@@ -2,6 +2,17 @@
 title: 'แม่บ้านรายชั่วโมง ภูเก็ต ทำความสะอาดถึงที่ เริ่ม 400 บาท/ชม.'
 metaTitle: 'แม่บ้านภูเก็ต รายชั่วโมง 400 บ./ชม. จองออนไลน์ | Phuket Maid Service'
 metaDescription: 'จ้างแม่บ้านภูเก็ตรายชั่วโมง เริ่ม 400 บาท/ชม. พร้อมอุปกรณ์และน้ำยา ตรวจประวัติทุกคน ประกัน 100,000 บ. จองง่ายทาง LINE ทำความสะอาดบ้าน คอนโด วิลล่า ทั่วภูเก็ต โทร 061-965-6292'
+keywords: 'แม่บ้านภูเก็ต, แม่บ้านรายชั่วโมงภูเก็ต, จ้างแม่บ้านภูเก็ต, ทำความสะอาดภูเก็ต, ทำความสะอาดภูเก็ตรายชั่วโมง, จ้างแม่บ้านรายชั่วโมงภูเก็ตราคา, แม่บ้านรายวันภูเก็ต, บริการแม่บ้านภูเก็ต, หาแม่บ้านภูเก็ต, maid phuket, hourly maid phuket'
+offer:
+  price: 400
+  unit: hour
+coverage:
+  - { label: 'แม่บ้านรายชั่วโมง', href: '/services/maid-hourly-phuket/' }
+  - { label: 'แม่บ้านรายวัน', href: '/services/daily-maid-phuket/' }
+  - { label: 'แม่บ้านรายสัปดาห์', href: '/services/weekly-maid-phuket/' }
+  - { label: 'แม่บ้านรายเดือน', href: '/services/monthly-maid-phuket/' }
+  - { label: 'ทำความสะอาดบ้าน', href: '/services/house-cleaning-phuket/' }
+  - { label: 'ทำความสะอาดคอนโด', href: '/services/condo-cleaning-phuket/' }
 heroImage: '/images/maid-kitchen-cabinet-cleaning-phuket.webp'
 heroImageAlt: 'แม่บ้านภูเก็ตรายชั่วโมงกำลังทำความสะอาดห้องครัวบ้านลูกค้า'
 priceHighlight: '400 บาท'

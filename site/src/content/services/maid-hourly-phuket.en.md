@@ -2,6 +2,17 @@
 title: 'Hourly Maid Service in Phuket — On-site Cleaning from ฿400/hr'
 metaTitle: 'Hourly Maid in Phuket ฿400/hr, Book Online | Phuket Maid Service'
 metaDescription: 'Hire an hourly maid in Phuket from ฿400/hr, supplies and products included. Background-checked staff, ฿100,000 insurance. Easy booking on LINE for homes, condos and villas across Phuket. Call +66 61 965 6292.'
+keywords: 'maid phuket, hourly maid phuket, cleaning lady phuket, house cleaning phuket, hire a maid in phuket, phuket maid service, daily maid phuket, condo cleaning phuket'
+offer:
+  price: 400
+  unit: hour
+coverage:
+  - { label: 'Hourly maid', href: '/en/services/maid-hourly-phuket/' }
+  - { label: 'Daily maid', href: '/en/services/daily-maid-phuket/' }
+  - { label: 'Weekly maid', href: '/en/services/weekly-maid-phuket/' }
+  - { label: 'Monthly maid', href: '/en/services/monthly-maid-phuket/' }
+  - { label: 'House cleaning', href: '/en/services/house-cleaning-phuket/' }
+  - { label: 'Condo cleaning', href: '/en/services/condo-cleaning-phuket/' }
 heroImage: '/images/maid-kitchen-cabinet-cleaning-phuket.webp'
 heroImageAlt: 'An hourly maid in Phuket cleaning a kitchen in a customer home'
 priceHighlight: '฿400'

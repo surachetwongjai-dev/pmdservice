@@ -39,6 +39,10 @@ const services = defineCollection({
       .array(z.object({ label: z.string(), href: z.string() }))
       .default([]), // ลิงก์ไปหน้า location ที่เกี่ยวข้อง (BRIEF ข้อ 7)
     serviceType: z.string(), // ใช้ใน Service schema (schema.org)
+    // ราคาแบบมีโครงสร้างสำหรับ Google Ads/rich result (Offer / UnitPriceSpecification)
+    offer: z.object({ price: z.number(), unit: z.enum(['hour', 'sqm', 'from']) }).optional(),
+    // แถบ "ครอบคลุมคำค้น" ใต้ hero — คำที่ลูกค้าค้นหา + ลิงก์บริการย่อย (ช่วย Ad relevance/message match)
+    coverage: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
     draft: z.boolean().default(false),
   }),
 });

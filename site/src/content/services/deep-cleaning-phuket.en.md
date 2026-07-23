@@ -3,6 +3,15 @@ title: 'Deep Cleaning in Phuket — Homes & Condos, from ฿4,000'
 metaTitle: 'Deep Cleaning Phuket, Big Cleaning from ฿4,000 | Phuket Maid Service'
 metaDescription: 'Deep cleaning in Phuket for homes and condos — a full top-to-bottom clean of every corner. Big Cleaning package from ฿4,000. Ideal before move-in, after renovation or a long vacancy. Background-checked, ฿100,000 insurance. Call +66 61 965 6292.'
 keywords: 'deep cleaning phuket, big cleaning phuket, house deep cleaning phuket, post construction cleaning phuket, move in cleaning phuket'
+offer:
+  price: 4000
+  unit: from
+coverage:
+  - { label: 'Deep / Big Cleaning', href: '/en/services/deep-cleaning-phuket/' }
+  - { label: 'Whole-home Big Cleaning', href: '/en/services/big-cleaning-phuket/' }
+  - { label: 'Post-construction cleaning', href: '/en/services/post-construction-cleaning-phuket/' }
+  - { label: 'Post-renovation cleaning', href: '/en/services/post-renovation-cleaning-phuket/' }
+  - { label: 'Move-in cleaning', href: '/en/services/move-in-cleaning-phuket/' }
 heroImage: '/images/living-room-deep-cleaning-phuket.webp'
 heroImageAlt: 'A Deep Cleaning team in Phuket cleaning a living room top to bottom, every corner'
 priceHighlight: 'From ฿4,000'

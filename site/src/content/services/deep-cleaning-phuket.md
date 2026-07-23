@@ -2,7 +2,16 @@
 title: 'Deep Cleaning ภูเก็ต ทำความสะอาดบ้าน คอนโด ครั้งใหญ่ เริ่ม 4,000 บาท'
 metaTitle: 'Deep Cleaning ภูเก็ต Big Cleaning เริ่ม 4,000 บ. | Phuket Maid Service'
 metaDescription: 'Deep Cleaning ภูเก็ต ทำความสะอาดบ้าน คอนโด ครั้งใหญ่ทุกซอกมุม แพ็กเกจเริ่ม 4,000 บาท เหมาะกับบ้านก่อนเข้าอยู่ หลังรีโนเวท บ้านทิ้งไว้นาน ทีมงานตรวจประวัติ ประกัน 100,000 บ. โทร 061-965-6292'
-keywords: 'deep cleaning ภูเก็ต, big cleaning ภูเก็ต, ดีพคลีนนิ่งภูเก็ต, ดริฟคลีนนิ่งภูเก็ต, ทำความสะอาดบ้านคอนโดดีพคลีนนิ่งภูเก็ต, big cleaning หลังก่อสร้างภูเก็ต, ทำความสะอาดครั้งใหญ่ภูเก็ต'
+keywords: 'deep cleaning ภูเก็ต, big cleaning ภูเก็ต, ดีพคลีนนิ่งภูเก็ต, ดริฟคลีนนิ่งภูเก็ต, ทำความสะอาดบ้านคอนโดดีพคลีนนิ่งภูเก็ต, big cleaning หลังก่อสร้างภูเก็ต, ทำความสะอาดครั้งใหญ่ภูเก็ต, ทำความสะอาดบ้านภูเก็ต, ดีพคลีนนิ่งคอนโดภูเก็ต, big cleaning ภูเก็ตราคา, ทำความสะอาดก่อนเข้าอยู่ภูเก็ต'
+offer:
+  price: 4000
+  unit: from
+coverage:
+  - { label: 'Deep Cleaning / Big Cleaning', href: '/services/deep-cleaning-phuket/' }
+  - { label: 'Big Cleaning เหมาทั้งหลัง', href: '/services/big-cleaning-phuket/' }
+  - { label: 'ทำความสะอาดหลังก่อสร้าง', href: '/services/post-construction-cleaning-phuket/' }
+  - { label: 'ทำความสะอาดหลังรีโนเวท', href: '/services/post-renovation-cleaning-phuket/' }
+  - { label: 'ทำความสะอาดก่อนเข้าอยู่', href: '/services/move-in-cleaning-phuket/' }
 heroImage: '/images/living-room-deep-cleaning-phuket.webp'
 heroImageAlt: 'ทีมแม่บ้าน Deep Cleaning ภูเก็ตทำความสะอาดห้องนั่งเล่นครั้งใหญ่ทุกซอกมุม'
 priceHighlight: 'เริ่มต้น 4,000 บาท'

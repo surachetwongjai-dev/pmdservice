@@ -2,7 +2,15 @@
 title: 'ซักโซฟา ที่นอน ผ้าม่าน ภูเก็ต ระบบไอน้ำฆ่าเชื้อ กำจัดไรฝุ่น'
 metaTitle: 'ซักโซฟาภูเก็ต ซักที่นอน ไอน้ำฆ่าเชื้อ ถึงบ้าน | Phuket Maid Service'
 metaDescription: 'ซักโซฟาภูเก็ต เริ่มต้น 1,000 บาท ซักที่นอน ผ้าม่าน ด้วยระบบไอน้ำฆ่าเชื้อ + เครื่องดูดสกัดคราบมืออาชีพ กำจัดไรฝุ่นต้นเหตุภูมิแพ้ บริการถึงบ้านทั่วภูเก็ต โทร 061-965-6292'
-keywords: 'ซักโซฟาภูเก็ต, ซักที่นอนภูเก็ต, ซักผ้าม่านภูเก็ต, sofa cleaning phuket, ซักโซฟาไอน้ำฆ่าเชื้อภูเก็ต, กำจัดไรฝุ่นที่นอนภูเก็ต, ซักเบาะกำจัดคราบภูเก็ต'
+keywords: 'ซักโซฟาภูเก็ต, ซักที่นอนภูเก็ต, ซักผ้าม่านภูเก็ต, sofa cleaning phuket, ซักโซฟาไอน้ำฆ่าเชื้อภูเก็ต, กำจัดไรฝุ่นที่นอนภูเก็ต, ซักเบาะกำจัดคราบภูเก็ต, ซักโซฟาถึงบ้านภูเก็ต, ซักเบาะโซฟาภูเก็ต, ซักที่นอนกำจัดไรฝุ่นภูเก็ต, ร้านซักโซฟาภูเก็ต'
+offer:
+  price: 1000
+  unit: from
+coverage:
+  - { label: 'ซักโซฟา', href: '/services/sofa-cleaning-phuket/' }
+  - { label: 'ซักที่นอน กำจัดไรฝุ่น', href: '/services/mattress-cleaning-phuket/' }
+  - { label: 'ซักผ้าม่าน', href: '/services/curtain-cleaning-phuket/' }
+  - { label: 'ซักพรม', href: '/services/carpet-cleaning-phuket/' }
 heroImage: '/images/sofa-steam-cleaning-phuket.webp'
 heroImageAlt: 'ซักโซฟาภูเก็ตด้วยเครื่องดูดสกัดคราบระบบไอน้ำฆ่าเชื้อถึงบ้าน'
 heroVideo: '/videos/sofa-steam-extraction-phuket.mp4'

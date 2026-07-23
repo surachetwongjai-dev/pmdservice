@@ -3,6 +3,14 @@ title: 'Marble & Tile Polishing in Phuket — Like-new Shine, ฿250/sqm'
 metaTitle: 'Marble Polishing Phuket ฿250/sqm, Free Trial | Phuket Maid Service'
 metaDescription: 'Marble floor polishing in Phuket ฿250/sqm, tile shine restoration, sandwash & wax ฿100/sqm. Free trial patch before you decide. Homes, pool villas, hotels and offices across Phuket. Call +66 61 965 6292.'
 keywords: 'marble polishing phuket, floor polishing phuket, tile polishing phuket, sandwash wax phuket, pool villa floor polishing phuket'
+offer:
+  price: 250
+  unit: sqm
+coverage:
+  - { label: 'Marble polishing', href: '/en/services/marble-polishing-phuket/' }
+  - { label: 'Tile shine restoration', href: '/en/services/marble-polishing-phuket/' }
+  - { label: 'Sandwash / wax', href: '/en/services/sandwash-polishing-phuket/' }
+  - { label: 'Pool villa floors', href: '/en/services/pool-villa-cleaning-phuket/' }
 heroImage: '/images/marble-floor-polishing-phuket.webp'
 heroImageAlt: 'Marble floor polishing in Phuket with a professional buffing machine in an office'
 heroVideo: '/videos/floor-scrubbing-machine-phuket.mp4'
