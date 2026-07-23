@@ -21,7 +21,7 @@ const isActive = (href: string) =>
 
 <!-- Top bar -->
 <div class="bg-navy-900 text-white text-xs sm:text-sm">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-1.5">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-3 px-4 py-1.5">
     <p class="flex items-center gap-1.5 truncate">
       <svg class="h-3.5 w-3.5 shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
       {L.topbarNote}
@@ -57,16 +57,16 @@ const isActive = (href: string) =>
 
 <!-- Main header -->
 <header class="sticky top-0 z-40 border-b border-brand-50 bg-white/95 shadow-sm backdrop-blur">
-  <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3">
-    <a href={localeHome(locale)} class="flex items-center gap-2.5" aria-label="Phuket Maid Service">
-      <Logo class="h-10 w-10" />
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-2.5">
+    <a href={localeHome(locale)} class="flex shrink-0 items-center gap-2.5" aria-label="Phuket Maid Service">
+      <Logo class="h-10 w-10 shrink-0" />
       <span class="leading-tight">
-        <span class="block text-lg font-extrabold tracking-tight text-navy-900">PHUKET <span class="text-brand-600">MAID SERVICE</span></span>
-        <span class="block text-[11px] text-ink-600">{L.logoTagline}</span>
+        <span class="block whitespace-nowrap text-base font-extrabold tracking-tight text-navy-900 xl:text-lg">PHUKET <span class="text-brand-600">MAID SERVICE</span></span>
+        <span class="block whitespace-nowrap text-[11px] text-ink-600 lg:hidden 2xl:block">{L.logoTagline}</span>
       </span>
     </a>
 
-    <nav class="hidden items-center gap-6 lg:flex" aria-label="Main menu">
+    <nav class="hidden items-center gap-x-5 lg:flex xl:gap-x-6" aria-label="Main menu">
       {L.nav.map((item) => (
         <a
           href={item.href}
