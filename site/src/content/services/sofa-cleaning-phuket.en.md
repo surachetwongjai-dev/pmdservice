@@ -43,6 +43,11 @@ faq:
   - q: 'Do curtains need to be taken down for cleaning?'
     a: 'No — the team steam-cleans them in place while they hang, reducing the risk of shrinkage or rail damage, and you avoid the wait of sending them away for days.'
 related: ['deep-cleaning-phuket', 'maid-hourly-phuket']
+areaLinks:
+  - { label: 'Sofa cleaning in Patong', href: '/en/locations/patong/' }
+  - { label: 'Sofa cleaning in Rawai', href: '/en/locations/rawai/' }
+  - { label: 'Sofa cleaning in Kamala', href: '/en/locations/kamala/' }
+  - { label: 'Sofa cleaning in Bang Tao', href: '/en/locations/bangtao/' }
 serviceType: 'Sofa, mattress and curtain steam cleaning'
 ---
 

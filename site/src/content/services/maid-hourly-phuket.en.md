@@ -38,6 +38,11 @@ faq:
   - q: 'Do you offer daily, weekly or monthly maids?'
     a: 'Yes — hourly, daily, weekly and monthly, suitable for homes, condos, villas, Airbnb stays and offices. Regular packages come at special rates; ask for a quote on LINE.'
 related: ['deep-cleaning-phuket', 'sofa-cleaning-phuket']
+areaLinks:
+  - { label: 'Maid in Patong', href: '/en/locations/patong/' }
+  - { label: 'Maid in Phuket Town', href: '/en/locations/phuket-town/' }
+  - { label: 'Maid in Cherng Talay', href: '/en/locations/cherngtalay/' }
+  - { label: 'Maid in Chalong', href: '/en/locations/chalong/' }
 serviceType: 'Hourly maid service'
 ---
 

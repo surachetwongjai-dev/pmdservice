@@ -40,6 +40,11 @@ faq:
   - q: 'Do you polish pool villas and hotels, and can you work outside business hours?'
     a: 'Yes — pool villas, hotels, resorts and office buildings are our main clients in Phuket. The team can schedule around vacant hours or after business hours to avoid disturbing guests and users.'
 related: ['deep-cleaning-phuket', 'maid-hourly-phuket']
+areaLinks:
+  - { label: 'Floor polishing in Cherng Talay', href: '/en/locations/cherngtalay/' }
+  - { label: 'Floor polishing in Bang Tao', href: '/en/locations/bangtao/' }
+  - { label: 'Floor polishing in Mai Khao', href: '/en/locations/maikhao/' }
+  - { label: 'Floor polishing in Phuket Town', href: '/en/locations/phuket-town/' }
 serviceType: 'Marble and tile floor polishing'
 ---
 

@@ -8,9 +8,6 @@ import TrustBadges from '../../components/TrustBadges.astro';
 import SectionHeading from '../../components/SectionHeading.astro';
 import { breadcrumbSchema, faqSchema, serviceSchema } from '../../lib/schema';
 
-// 4 pillar ที่มีหน้า EN แล้ว (ใช้แสดงปุ่มสลับภาษาไปหน้าคู่)
-const EN_PILLARS = ['maid-hourly-phuket', 'sofa-cleaning-phuket', 'marble-polishing-phuket', 'deep-cleaning-phuket'];
-
 export async function getStaticPaths() {
   // เฉพาะไฟล์ไทย (ไม่เอา *.en ที่เป็นเนื้อหา EN)
   const services = await getCollection('services', ({ data, id }) => !data.draft && !id.endsWith('.en'));
@@ -24,7 +21,8 @@ const { Content } = await render(entry);
 const allServices = await getCollection('services', ({ data, id }) => !data.draft && !id.endsWith('.en'));
 const related = allServices.filter((s) => d.related.includes(s.id));
 
-const altUrl = EN_PILLARS.includes(entry.id) ? `/en/services/${entry.id}/` : undefined;
+// ทุกหน้า service มีคู่ EN แล้ว
+const altUrl = `/en/services/${entry.id}/`;
 
 const crumbs = [
   { label: 'หน้าแรก', href: '/' },

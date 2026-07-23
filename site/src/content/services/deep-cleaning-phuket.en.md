@@ -41,6 +41,11 @@ faq:
   - q: 'How long does it take, and do I need to stay during the work?'
     a: 'It depends on the size — a condo usually takes half a day, a whole house a full day or more. You do not have to stay throughout, but we recommend being there at the start to point out key spots and at the end to review together. Every maid is background-checked and insured.'
 related: ['maid-hourly-phuket', 'sofa-cleaning-phuket', 'marble-polishing-phuket']
+areaLinks:
+  - { label: 'Deep cleaning in Patong', href: '/en/locations/patong/' }
+  - { label: 'Deep cleaning in Kata', href: '/en/locations/kata/' }
+  - { label: 'Deep cleaning in Nai Yang', href: '/en/locations/naiyang/' }
+  - { label: 'Deep cleaning in Chalong', href: '/en/locations/chalong/' }
 serviceType: 'Deep cleaning and big cleaning'
 ---
 

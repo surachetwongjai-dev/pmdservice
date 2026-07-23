@@ -1,38 +1,39 @@
 ---
 import { getCollection, render } from 'astro:content';
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import CtaButtons from '../../components/CtaButtons.astro';
-import CtaSection from '../../components/CtaSection.astro';
-import TrustBadges from '../../components/TrustBadges.astro';
-import SectionHeading from '../../components/SectionHeading.astro';
-import { breadcrumbSchema, faqSchema } from '../../lib/schema';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CtaButtons from '../../../components/CtaButtons.astro';
+import CtaSection from '../../../components/CtaSection.astro';
+import TrustBadges from '../../../components/TrustBadges.astro';
+import SectionHeading from '../../../components/SectionHeading.astro';
+import { breadcrumbSchema, faqSchema } from '../../../lib/schema';
 
+// เนื้อหา EN อยู่ในไฟล์ *.en.md — slug ตัด .en ออก
 export async function getStaticPaths() {
-  const locations = await getCollection('locations', ({ data, id }) => !data.draft && !id.endsWith('.en'));
-  return locations.map((entry) => ({ params: { slug: entry.id }, props: { entry } }));
+  const locations = await getCollection('locations', ({ data, id }) => !data.draft && id.endsWith('.en'));
+  return locations.map((entry) => ({ params: { slug: entry.id.replace(/\.en$/, '') }, props: { entry } }));
 }
 
 const { entry } = Astro.props;
 const d = entry.data;
 const { Content } = await render(entry);
-const altUrl = `/en/locations/${entry.id}/`;
+const baseSlug = entry.id.replace(/\.en$/, '');
 
-// ลิงก์กลับไป pillar ทั้ง 4 (ข้อกำหนด BRIEF ข้อ 7)
 const pillars = [
-  { label: 'แม่บ้านรายชั่วโมง', href: '/services/maid-hourly-phuket/' },
-  { label: 'ซักโซฟา ที่นอน ผ้าม่าน', href: '/services/sofa-cleaning-phuket/' },
-  { label: 'ขัดพื้นหินอ่อน กระเบื้อง', href: '/services/marble-polishing-phuket/' },
-  { label: 'Deep Cleaning บ้าน คอนโด', href: '/services/deep-cleaning-phuket/' },
+  { label: 'Hourly maid service', href: '/en/services/maid-hourly-phuket/' },
+  { label: 'Sofa, mattress & curtain cleaning', href: '/en/services/sofa-cleaning-phuket/' },
+  { label: 'Marble & tile floor polishing', href: '/en/services/marble-polishing-phuket/' },
+  { label: 'Deep cleaning for homes & condos', href: '/en/services/deep-cleaning-phuket/' },
 ];
 
 const crumbs = [
-  { label: 'หน้าแรก', href: '/' },
-  { label: 'พื้นที่ให้บริการ' },
+  { label: 'Home', href: '/en/' },
+  { label: 'Service areas' },
   { label: d.areaName },
 ];
 
 const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] : [])];
+const altUrl = `/locations/${baseSlug}/`;
 ---
 
 <BaseLayout title={d.metaTitle} description={d.metaDescription} ogImage={d.heroImage} schema={schema} altUrl={altUrl}>
@@ -66,7 +67,7 @@ const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] 
     <div class="mx-auto grid max-w-6xl gap-10 px-4 lg:grid-cols-2">
       {d.propertyTypes.length > 0 && (
         <div>
-          <h2 class="text-2xl font-extrabold text-navy-900">ที่พักในย่าน{d.areaName}ที่เราดูแล</h2>
+          <h2 class="text-2xl font-extrabold text-navy-900">Properties we look after in {d.areaName}</h2>
           <ul class="mt-5 space-y-3">
             {d.propertyTypes.map((p) => (
               <li class="flex items-start gap-2.5 text-sm leading-relaxed text-ink-600">
@@ -78,7 +79,7 @@ const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] 
         </div>
       )}
       <div>
-        <h2 class="text-2xl font-extrabold text-navy-900">บริการยอดนิยมในย่านนี้</h2>
+        <h2 class="text-2xl font-extrabold text-navy-900">Popular services in this area</h2>
         <div class="mt-5 space-y-3">
           {(d.popularServices.length ? d.popularServices : pillars).map((s) => (
             <a href={s.href} class="flex items-center justify-between rounded-2xl border border-brand-100 bg-white px-5 py-3.5 text-sm font-bold text-navy-900 shadow-card transition hover:-translate-y-0.5 hover:text-brand-600 hover:shadow-card-hover">
@@ -100,7 +101,7 @@ const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] 
   {d.faq.length > 0 && (
     <section class="bg-white py-14 md:py-20">
       <div class="mx-auto max-w-3xl px-4">
-        <SectionHeading eyebrow="FAQ" title="คำถามที่พบบ่อย" />
+        <SectionHeading eyebrow="FAQ" title="Frequently asked questions" />
         <div class="mt-8 space-y-3">
           {d.faq.map((f) => (
             <details class="group rounded-2xl border border-brand-100 bg-white shadow-card open:border-brand-600">
@@ -116,5 +117,5 @@ const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] 
     </section>
   )}
 
-  <CtaSection title={`ต้องการแม่บ้านใน${d.areaName}? จองคิววันนี้`} />
+  <CtaSection title={`Need a maid in ${d.areaName}? Book today`} />
 </BaseLayout>

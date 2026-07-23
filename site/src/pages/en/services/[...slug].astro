@@ -231,5 +231,21 @@ const altUrl = `/services/${baseSlug}/`;
     </section>
   )}
 
+  <!-- Related service areas -->
+  {d.areaLinks.length > 0 && (
+    <section class="bg-white pb-14">
+      <div class="mx-auto max-w-6xl px-4">
+        <h2 class="text-xl font-extrabold text-navy-900">Popular service areas for this service</h2>
+        <div class="mt-4 flex flex-wrap gap-3">
+          {d.areaLinks.map((a) => (
+            <a href={a.href} class="rounded-full border border-brand-100 bg-brand-50 px-4 py-2 text-sm font-bold text-brand-700 transition hover:bg-brand-100">
+              {a.label}
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <CtaSection title="Interested? Get a free quote today" />
 </BaseLayout>

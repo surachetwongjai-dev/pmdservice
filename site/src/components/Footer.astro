@@ -6,9 +6,7 @@ import Logo from './Logo.astro';
 const locale = (Astro.currentLocale ?? 'th') as Locale;
 const L = t(locale);
 const year = new Date().getFullYear();
-// TODO(i18n): เมื่อแปลหน้า location เป็น EN แล้ว เปลี่ยนเป็น locale === 'en' ? '/en' : ''
-// ตอนนี้หน้า location มีเฉพาะไทย จึงชี้ TH ทั้งสองภาษา เพื่อไม่ให้ลิงก์เสีย
-const areaPrefix = '';
+const areaPrefix = locale === 'en' ? '/en' : '';
 ---
 
 <footer class="bg-navy-900 pb-24 text-brand-100 md:pb-0">
