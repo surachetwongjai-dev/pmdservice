@@ -1,0 +1,13 @@
+import { chromium } from 'playwright-core';
+const OUT = process.argv[2];
+const b = await chromium.launch({ executablePath: 'C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe' });
+const ctx = await b.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
+const pg = await ctx.newPage();
+await pg.goto('http://localhost:4323/services/curtain-cleaning-phuket/', { waitUntil: 'networkidle', timeout: 30000 }).catch(() => {});
+await pg.waitForTimeout(400);
+const h = pg.locator('h2', { hasText: 'ขั้นตอนการซัก' }).first();
+await h.scrollIntoViewIfNeeded();
+await pg.waitForTimeout(300);
+await pg.screenshot({ path: `${OUT}/wash-process.png` });
+console.log('done');
+await b.close();

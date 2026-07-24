@@ -28,13 +28,18 @@ included:
   - 'Air-blow to speed drying — usable again within 4–8 hours'
 priceRows:
   - { label: 'Sofa cleaning', price: 'From ฿1,000', note: 'Starting price, quoted by size and number of seats' }
-  - { label: 'Mattress cleaning (dust-mite removal)', price: 'Ask for a quote', note: 'Priced by size: 3.5 / 5 / 6 ft' }
-  - { label: 'Curtain cleaning (no need to remove)', price: 'Ask for a quote', note: 'Steam-cleaned in place' }
-  - { label: 'Carpet / office chairs', price: 'Ask for a quote', note: 'Special rate for multiple pieces' }
+  - { label: 'Mattress cleaning (dust-mite removal)', price: 'From ฿900', note: 'By size 3.5–6 ft (฿900–1,500)' }
+  - { label: 'Curtain cleaning (no need to remove)', price: 'From ฿1,200', note: '฿450 per curtain, minimum 3' }
+  - { label: 'Carpet / office chairs', price: 'From ฿1,500', note: 'Carpet from ฿1,500, special rate for multiple pieces' }
 steps:
   - { title: 'Send a photo for a quote', desc: 'Photograph the sofa, mattress or curtains and send it on LINE with your area.' }
   - { title: 'Confirm price and book', desc: 'We give a clear price before you book — pick a time that suits you.' }
   - { title: 'We clean at your home', desc: 'The team arrives with a full kit, works tidily and details every spot.' }
+washSteps:
+  - { title: 'Vacuum dust mites', desc: 'Vacuum out dust mites and built-up dust from the fabric with a German-standard machine before every wash.' }
+  - { title: 'Wash & extract at once', desc: 'Wash with an eco-friendly, fresh-scented solution and immediately extract the water and dirt.' }
+  - { title: 'Steam sanitise', desc: 'Inject hot steam to kill germs, bacteria and dust mites deep in the inner layer.' }
+  - { title: 'Blow-dry damp', desc: 'Hot-air blow-dry until damp-dry, ready to use again quickly.' }
 gallery:
   - { src: '/images/armchair-steam-cleaning-phuket.webp', alt: 'Steam cleaning a velvet armchair in a Phuket condo', caption: 'Velvet chairs cleaned in the condo' }
   - { src: '/images/chair-deep-stain-removal-phuket.webp', alt: 'Before and after cleaning a fabric chair seat in Phuket, clear difference', caption: 'A clear before-and-after' }

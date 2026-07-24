@@ -7,9 +7,9 @@ heroImage: '/images/mattress-drying-airbnb-phuket.webp'
 heroImageAlt: 'Speed-drying a mattress after dust-mite cleaning in a Phuket bedroom'
 heroVideo: '/videos/mattress-steam-sanitize-phuket.mp4'
 heroPoster: '/videos/mattress-steam-sanitize-phuket-poster.webp'
-priceHighlight: 'Free estimate'
-priceUnit: 'by mattress size'
-priceNote: 'Every size 3.5 / 5 / 6 ft — send the size and number of beds on LINE for an instant price'
+priceHighlight: 'From ฿900'
+priceUnit: '/ mattress'
+priceNote: 'By size 3.5–6 ft (฿900–1,500) — send the size and number of beds on LINE'
 intro: 'Mattress cleaning in Phuket at home, removing the dust mites behind the allergies of young children and older adults. Done in every size from 3.5 to 6 feet without lifting the mattress out of the room. The Phuket Maid Service team speed-dries it ready to use, so you can sleep on the same mattress that very night. Send the mattress size on LINE for a free estimate before booking.'
 included:
   - 'Vacuum dust and mites off every reachable surface of the mattress'
@@ -19,14 +19,19 @@ included:
   - 'Speed-dry ready to sleep on the same night'
   - 'Done in your bedroom — no need to move the mattress'
 priceRows:
-  - { label: '3.5 ft mattress', price: 'Ask for a quote', note: 'Children''s mattresses and single beds included' }
-  - { label: '5 ft mattress', price: 'Ask for a quote', note: 'Standard master-bedroom size' }
-  - { label: '6 ft mattress', price: 'Ask for a quote', note: 'King beds and villa mattresses' }
-  - { label: 'Multiple beds / whole home', price: 'Ask for a quote', note: 'Every room in one visit, special package rate' }
+  - { label: '3.5 ft mattress', price: '฿900', note: 'Children''s mattresses and single beds included' }
+  - { label: '5 ft mattress', price: '฿1,200', note: 'Standard master-bedroom size' }
+  - { label: '6 ft mattress', price: '฿1,500', note: 'King beds and villa mattresses' }
+  - { label: 'Multiple beds / whole home', price: 'Special rate', note: 'Every room in one visit, special package rate' }
 steps:
   - { title: 'Tell us the size and number of beds', desc: 'Give the mattress size, number of beds and any concerns — smell, stains or allergies — on LINE.' }
   - { title: 'Get a price and pick a convenient day', desc: 'The team quotes by actual size before booking, and recommends a morning slot to allow a full day''s drying.' }
   - { title: 'Cleaned in the bedroom, dried ready to sleep', desc: 'The team works in your room to the finish, speed-dries and puts the mattress back in place before leaving.' }
+washSteps:
+  - { title: 'Vacuum dust mites', desc: 'Vacuum out dust mites and built-up dust with a German-standard machine before every wash.' }
+  - { title: 'Wash & extract at once', desc: 'Wash with an eco-friendly, fresh-scented solution and immediately extract the water and dirt.' }
+  - { title: 'Steam sanitise', desc: 'Inject hot steam to kill germs, bacteria and dust mites deep in the inner layer.' }
+  - { title: 'Blow-dry damp', desc: 'Hot-air blow-dry until damp-dry, ready to use again quickly.' }
 gallery:
   - { src: '/images/mattress-drying-airbnb-phuket.webp', alt: 'An air blower speed-drying a mattress after dust-mite cleaning in Phuket', caption: 'Speed-dried right after cleaning — sleep on it that night' }
   - { src: '/images/karcher-professional-equipment-phuket.webp', alt: 'Professional-standard mattress cleaning equipment the Phuket team actually uses', caption: 'Dedicated equipment, not just a vacuum' }

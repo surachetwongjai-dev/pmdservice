@@ -7,9 +7,9 @@ heroImage: '/images/karcher-extraction-machine-phuket.webp'
 heroImageAlt: 'A professional extraction machine for on-site carpet cleaning in Phuket'
 heroVideo: '/videos/upholstery-deep-clean-phuket.mp4'
 heroPoster: '/videos/upholstery-deep-clean-phuket-poster.webp'
-priceHighlight: 'Free estimate'
-priceUnit: 'by carpet size'
-priceNote: 'Send a photo of the carpet with its rough size on LINE — know the price before you book'
+priceHighlight: 'From ฿1,500'
+priceUnit: '/ rug'
+priceNote: 'Starting price, quoted by carpet size and type — send a photo on LINE to know the price before you book'
 intro: 'On-site carpet cleaning in Phuket for both office floor carpet and home rugs, dealing with built-up dust, musty odours from humidity, and coffee stains, using the same water-extraction machine as our sofa cleaning. The Phuket Maid Service team chooses the method by fibre type and speed-dries every job. Send a photo of the carpet for a free estimate on LINE.'
 included:
   - 'Vacuum coarse dust and grit from the base of the fibres before we start'
@@ -19,13 +19,18 @@ included:
   - 'Air-blow to speed drying after every job'
   - 'We handle both wall-to-wall office carpet and home rugs'
 priceRows:
-  - { label: 'Home rugs', price: 'Ask for a quote', note: 'Send the rough size on LINE' }
-  - { label: 'Office / hotel floor carpet', price: 'Ask for a quote', note: 'Quoted by real area, can be scheduled outside business hours' }
-  - { label: 'Carpet + sofa in one visit', price: 'Ask for a quote', note: 'Same machine set — bundling together costs less' }
+  - { label: 'Home rugs', price: 'From ฿1,500', note: 'Send the rough size on LINE' }
+  - { label: 'Office / hotel floor carpet', price: 'Quoted by area', note: 'Quoted by real area, can be scheduled outside business hours' }
+  - { label: 'Carpet + sofa in one visit', price: 'Special rate', note: 'Same machine set — bundling together costs less' }
 steps:
   - { title: 'Send a photo and the size', desc: 'Photograph the whole carpet and any stained spots, with a rough size, and send it on LINE.' }
   - { title: 'Confirm price and method', desc: 'The team assesses the fibre type and stain level, and gives a clear price before booking.' }
   - { title: 'On-site cleaning with speed-drying', desc: 'We clean with the extraction machine at your home or office, air-blow to speed drying, and review the result together.' }
+washSteps:
+  - { title: 'Vacuum dust mites', desc: 'Vacuum dust mites and coarse dust from the fibre base with a German-standard machine before every wash.' }
+  - { title: 'Wash & extract at once', desc: 'Wash with an eco-friendly, fresh-scented solution and immediately extract the water and dirt.' }
+  - { title: 'Steam sanitise', desc: 'Inject hot steam to kill germs, bacteria and musty odours down to the fibre base.' }
+  - { title: 'Blow-dry damp', desc: 'Hot-air blow-dry the carpet until damp-dry, ready to use again quickly.' }
 gallery:
   - { src: '/images/karcher-extraction-machine-phuket.webp', alt: 'A water-extraction machine cleaning carpet and upholstery in Phuket', caption: 'Injects solution deep to the fibre base, then draws it straight back' }
   - { src: '/images/karcher-professional-equipment-phuket.webp', alt: 'German-standard professional carpet cleaning equipment used by the Phuket team', caption: 'Professional-grade kit, not a home pressure washer' }
@@ -61,4 +66,4 @@ We clean carpets with a water-extraction machine, the same system used on our [s
 
 Carpet holds more water than a sofa cushion, so the question "when can we walk on it?" matters. The team air-blows to speed drying on every job and suggests running the air-con or a fan to clear the humidity. For offices, the formula our regulars use is to have the team clean in the evening after staff leave, so the carpet has all night to dry and everyone comes in the next morning as if nothing happened. Book it alongside a big annual [office cleaning](/en/services/office-cleaning-phuket/) in the same visit.
 
-Home rugs don''t need to be hauled off to a shop or left for days — we clean them on-site and lay them back exactly where they were. Send a photo of the carpet with its rough size on LINE and the team gives a free estimate before booking. Open daily 08:00–18:00, call +66 61 965 6292. For homes with pets or young children, we recommend bundling carpet, sofa and mattress cleaning in one visit — the package rate beats hiring each separately.
+Home rugs don''t need to be hauled off to a shop or left for days — we clean them on-site and lay them back exactly where they were. Send a photo of the carpet with its rough size on LINE and the team gives a price before booking, from ฿1,500. Open daily 08:00–18:00, call +66 61 965 6292. For homes with pets or young children, we recommend bundling carpet, sofa and mattress cleaning in one visit — the package rate beats hiring each separately.

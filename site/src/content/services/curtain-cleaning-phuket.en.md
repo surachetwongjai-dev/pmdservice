@@ -5,9 +5,9 @@ metaDescription: 'On-site curtain cleaning in Phuket with no need to take curtai
 keywords: 'curtain cleaning phuket, drape cleaning phuket, on-site curtain cleaning phuket, curtain cleaning no removal phuket, curtain mould removal phuket, sheer curtain cleaning phuket'
 heroImage: '/images/living-room-deep-cleaning-phuket.webp'
 heroImageAlt: 'A team cleaning a Phuket living room including the curtains'
-priceHighlight: 'Free estimate'
-priceUnit: 'by number of curtains'
-priceNote: 'Photograph every set and send it on LINE — know the price before you book, no waiting with curtains down'
+priceHighlight: 'From ฿1,200'
+priceUnit: '/ visit'
+priceNote: '฿450 per curtain, minimum 3 — photograph the curtains and send on LINE to know the price before you book'
 intro: 'On-site curtain cleaning in Phuket with no need to take the curtains off the rail — no more shrinking fabric, lost hooks or rails damaged by removal and refitting. We clear built-up dust and the mould spots caused by air-con and humidity. The Phuket Maid Service team handles both sheer and blackout curtains with different methods to suit the fabric. Send a photo of the curtains for a free estimate on LINE.'
 included:
   - 'Clean the whole curtain while it hangs on the rail — no removal'
@@ -17,13 +17,18 @@ included:
   - 'Tidy the pelmet and the dust on the rail'
   - 'Finished in one day — no bare windows waiting for curtains'
 priceRows:
-  - { label: 'Blackout / light-blocking curtains', price: 'Ask for a quote', note: 'Priced by number of curtains and width' }
-  - { label: 'Sheer curtains (fine fabric)', price: 'Ask for a quote', note: 'Handled with a fabric-gentle method' }
-  - { label: 'Whole-home curtain package', price: 'Ask for a quote', note: 'Villas and multi-room homes, special package rate' }
+  - { label: 'Minimum charge per visit', price: 'From ฿1,200', note: 'Minimum 3 curtains per visit' }
+  - { label: 'Per curtain', price: '฿450 / curtain', note: 'Both sheer and blackout curtains' }
+  - { label: 'Whole-home curtain package', price: 'Special rate', note: 'Villas and multi-room homes, special package rate' }
 steps:
   - { title: 'Photograph every curtain set', desc: 'Capture the whole curtain and any marks or mould, with a rough width, and send it on LINE.' }
   - { title: 'Get a price by number of curtains', desc: 'The team reads the fabric type from the photo and gives a clear price and timing before booking.' }
   - { title: 'Cleaned on-site with no removal', desc: 'The team works set by set — the curtains stay in place throughout and dry fast because they''re never soaked.' }
+washSteps:
+  - { title: 'Vacuum dust mites', desc: 'Vacuum dust mites and built-up dust off the curtain with a German-standard machine before every wash.' }
+  - { title: 'Wash & extract at once', desc: 'Wash with an eco-friendly, fresh-scented solution and immediately extract the water and dirt.' }
+  - { title: 'Steam sanitise', desc: 'Inject hot steam to kill germs, bacteria and mould spots deep in the fabric.' }
+  - { title: 'Blow-dry damp', desc: 'Hot-air blow-dry until damp-dry, ready to use again quickly.' }
 gallery:
   - { src: '/images/living-room-deep-cleaning-phuket.webp', alt: 'A Phuket living room where the team cleans everything including the curtains', caption: 'Curtains handled alongside the room clean in one visit' }
   - { src: '/images/karcher-professional-equipment-phuket.webp', alt: 'Professional equipment used for on-site curtain cleaning in Phuket', caption: 'Dedicated fabric equipment, set to the curtain type' }
@@ -59,4 +64,4 @@ Curtains are the front line taking both dust from the window and cold air-con ai
 
 Sheer curtains are light and delicate, and too much heat or pull will leave them sagging out of shape. So the team uses a mild heat level, keeps distance from the fabric, and focuses on lifting dust and restoring their clear whiteness. Blackout and light-blocking curtains are thick and often have a coated backing, so we keep heat away from the coating directly but can work dust, smells and mould spots more intensively. Before starting, the team checks the fabric type of every curtain set and picks the right method for each one — not a single method across the whole house.
 
-Photograph each curtain set with a rough width and send it on LINE for a free estimate by actual number of curtains. Every maid is trained and police background-checked, with ฿100,000 damage insurance. The team speaks Thai & English, open daily 08:00–18:00, call +66 61 965 6292.
+Photograph each curtain set with a rough width and send it on LINE for a price by actual number of curtains — from ฿1,200 (฿450 per curtain, minimum 3). Every maid is trained and police background-checked, with ฿100,000 damage insurance. The team speaks Thai & English, open daily 08:00–18:00, call +66 61 965 6292.

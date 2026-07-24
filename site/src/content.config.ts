@@ -30,6 +30,9 @@ const services = defineCollection({
     steps: z
       .array(z.object({ title: z.string(), desc: z.string() }))
       .default([]), // ขั้นตอนจอง 3 สเต็ป
+    washSteps: z
+      .array(z.object({ title: z.string(), desc: z.string() }))
+      .default([]), // ขั้นตอนการซัก (เฉพาะบริการซักโซฟา/ที่นอน/ผ้าม่าน/พรม)
     gallery: z
       .array(z.object({ src: z.string(), alt: z.string(), caption: z.string().optional() }))
       .default([]),
