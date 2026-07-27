@@ -11,7 +11,7 @@ export const SITE = {
   lineId: 'phu-andatravel',
   lineUrl: 'https://line.me/R/ti/p/~phu-andatravel',
   whatsapp: 'https://wa.me/66619656292',
-  email: 'officephuketmaid@gmail.com',
+  email: 'phuketmaidservice.th@gmail.com',
   facebook: 'https://www.facebook.com/cleaner8',
 
   address: {

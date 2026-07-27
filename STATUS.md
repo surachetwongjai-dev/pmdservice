@@ -148,7 +148,7 @@ Screenshot ทุกหน้า desktop 1440 / mobile 375 อยู่ใน `s
 3. ~~**ราคาซักโซฟา/ที่นอน/ผ้าม่าน**~~ ✅ ยืนยันแล้ว — ที่นอน 900/1,200/1,500 ตามขนาด, ผ้าม่าน 1,200 (ผืนละ 450 ขั้นต่ำ 3 ผืน), พรมเริ่ม 1,500, โซฟาเริ่ม 1,000
 4. เบอร์ 086-682-6291 จากเว็บเดิมยังใช้ไหม / จะใช้อีเมลโดเมนใหม่ @phuketmaidservice.com ไหม
 5. **GTM Container ID จริง** — แทน `GTM-XXXXXXX` ใน `site/src/layouts/BaseLayout.astro` แล้วปลด comment 2 จุด
-6. ยืนยันวิธีรับฟอร์ม: ตอนนี้ใช้ **formsubmit.co** ส่งเข้า officephuketmaid@gmail.com (ครั้งแรกต้องกดยืนยันอีเมลจาก formsubmit)
+6. **⚠️ ต้องกดยืนยัน formsubmit ก่อนฟอร์มจะใช้งานได้** — เปลี่ยนอีเมลรับฟอร์มเป็น `phuketmaidservice.th@gmail.com` แล้ว (อีเมลเดิม `officephuketmaid@gmail.com` เข้าถึงไม่ได้ เจ้าของบัญชีเดิมติดต่อไม่ได้) → ส่งฟอร์มทดสอบ 1 ครั้งจากหน้า `/contact/` แล้วเปิดกล่องอีเมลใหม่กดลิงก์ยืนยันจาก formsubmit.co
 7. รอบหน้า (ตาม BRIEF): หน้า portfolio, about, articles + หน้า service ย่อย ~20 หน้า + หน้า location 11 หน้า
 
 ## วิธี Deploy ขึ้น Cloudflare Pages
