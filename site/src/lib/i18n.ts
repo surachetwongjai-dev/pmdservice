@@ -43,9 +43,10 @@ type Dict = {
   // testimonials
   reviewsEyebrow: string;
   reviewsTitle: string;
-  reviewPending: string;
-  reviewNamePending: string;
-  reviewRoles: string[];
+  reviewsIntro: string;
+  reviewPoints: { title: string; desc: string }[];
+  clientTypesLabel: string;
+  clientTypes: string[];
   // footer
   footerAbout: string;
   footerQuick: string;
@@ -122,11 +123,17 @@ export const STRINGS: Record<Locale, Dict> = {
     ],
     ctaTitle: 'พร้อมให้บริการทั่วภูเก็ต จองคิววันนี้',
     ctaSubtitle: 'โทรหรือแอด LINE รับใบเสนอราคาฟรี ไม่มีข้อผูกมัด — ทีมงานตอบทั้งภาษาไทยและอังกฤษ',
-    reviewsEyebrow: 'Customer Testimonials',
-    reviewsTitle: 'รีวิวจากลูกค้าของเรา',
-    reviewPending: '[รอรีวิวจริงจากลูกค้า]',
-    reviewNamePending: '[รอชื่อลูกค้า]',
-    reviewRoles: ['เจ้าของบ้าน', 'เจ้าของคอนโด', 'Airbnb Host'],
+    reviewsEyebrow: 'Customer Feedback',
+    reviewsTitle: 'สิ่งที่ลูกค้าบอกเราบ่อยที่สุด',
+    reviewsIntro: 'สรุปจากฟีดแบ็กที่ลูกค้าบ้าน คอนโด พูลวิลล่า และสำนักงานบอกเรามาบ่อยที่สุด',
+    reviewPoints: [
+      { title: 'ตรงเวลา', desc: 'ทีมงานมาตามนัด และแจ้งล่วงหน้าทุกครั้งถ้ามีการเปลี่ยนแปลง' },
+      { title: 'สะอาดจริง', desc: 'เก็บงานถึงจุดที่การทำความสะอาดทั่วไปมองข้าม แล้วตรวจงานร่วมกันก่อนกลับ' },
+      { title: 'มืออาชีพ', desc: 'ผ่านการอบรม ตรวจประวัติอาชญากรรมทุกคน ทุกงานมีประกันความเสียหาย 100,000 บาท' },
+      { title: 'คุยง่าย ตอบไว', desc: 'จองผ่าน LINE รู้ราคาชัดเจนก่อนเริ่มงาน สื่อสารได้ทั้งไทยและอังกฤษ' },
+    ],
+    clientTypesLabel: 'ลูกค้าที่เราดูแลประจำ',
+    clientTypes: ['บ้าน / ทาวน์โฮม', 'คอนโด', 'พูลวิลล่า / Airbnb', 'โรงแรม / รีสอร์ท', 'สำนักงาน / อาคาร'],
     footerAbout:
       'บริการทำความสะอาดครบวงจรในภูเก็ต เจ้าแรกที่ให้บริการจองแม่บ้านออนไลน์ แม่บ้านผ่านการอบรมและตรวจประวัติอาชญากรรมทุกคน พร้อมประกันความเสียหายวงเงิน 100,000 บาท',
     footerQuick: 'เมนูด่วน',
@@ -183,11 +190,17 @@ export const STRINGS: Record<Locale, Dict> = {
     ],
     ctaTitle: 'Ready to serve across Phuket — book today',
     ctaSubtitle: 'Call or add us on LINE for a free, no-obligation quote — our team replies in both Thai and English.',
-    reviewsEyebrow: 'Customer Testimonials',
-    reviewsTitle: 'What our customers say',
-    reviewPending: '[Awaiting real customer review]',
-    reviewNamePending: '[Customer name pending]',
-    reviewRoles: ['Homeowner', 'Condo owner', 'Airbnb Host'],
+    reviewsEyebrow: 'Customer Feedback',
+    reviewsTitle: 'What customers tell us most often',
+    reviewsIntro: 'A summary of the feedback we hear most from our home, condo, pool-villa and office clients',
+    reviewPoints: [
+      { title: 'On time', desc: 'The team arrives as booked, and tells you in advance whenever anything changes.' },
+      { title: 'Genuinely clean', desc: 'We reach the spots ordinary cleaning skips, then review the result with you before we leave.' },
+      { title: 'Professional', desc: 'Every maid is trained and police background-checked, and every job carries ฿100,000 damage insurance.' },
+      { title: 'Easy to deal with', desc: 'Book on LINE, know the price clearly before we start, and talk to us in Thai or English.' },
+    ],
+    clientTypesLabel: 'Clients we look after regularly',
+    clientTypes: ['Houses / townhomes', 'Condos', 'Pool villas / Airbnb', 'Hotels / resorts', 'Offices / buildings'],
     footerAbout:
       'Full-service cleaning in Phuket and the first to offer online maid booking. Every maid is trained and police background-checked, and every job carries ฿100,000 damage insurance.',
     footerQuick: 'Quick Links',
