@@ -13,8 +13,8 @@ coverage:
   - { label: 'Monthly maid', href: '/en/services/monthly-maid-phuket/' }
   - { label: 'House cleaning', href: '/en/services/house-cleaning-phuket/' }
   - { label: 'Condo cleaning', href: '/en/services/condo-cleaning-phuket/' }
-heroImage: '/images/maid-kitchen-cabinet-cleaning-phuket.webp'
-heroImageAlt: 'An hourly maid in Phuket cleaning a kitchen in a customer home'
+heroImage: '/images/hourly-maid-cleaning-living-room-phuket.webp'
+heroImageAlt: 'An hourly maid in Phuket vacuuming a customer living room to a spotless shine'
 priceHighlight: '฿400'
 priceUnit: '/ hour'
 priceNote: 'Minimum 2 hours · excl. tax · cleaning supplies and products included'

@@ -13,8 +13,8 @@ coverage:
   - { label: 'แม่บ้านรายเดือน', href: '/services/monthly-maid-phuket/' }
   - { label: 'ทำความสะอาดบ้าน', href: '/services/house-cleaning-phuket/' }
   - { label: 'ทำความสะอาดคอนโด', href: '/services/condo-cleaning-phuket/' }
-heroImage: '/images/maid-kitchen-cabinet-cleaning-phuket.webp'
-heroImageAlt: 'แม่บ้านภูเก็ตรายชั่วโมงกำลังทำความสะอาดห้องครัวบ้านลูกค้า'
+heroImage: '/images/hourly-maid-cleaning-living-room-phuket.webp'
+heroImageAlt: 'แม่บ้านรายชั่วโมงภูเก็ตดูดฝุ่นทำความสะอาดห้องนั่งเล่นบ้านลูกค้าจนพื้นเงาสะอาด'
 priceHighlight: '400 บาท'
 priceUnit: '/ ชั่วโมง'
 priceNote: 'ขั้นต่ำ 2 ชั่วโมง · ยังไม่รวมภาษี · พร้อมอุปกรณ์และน้ำยาทำความสะอาดครบชุด'

@@ -131,16 +131,17 @@ const works = [
       </div>
 
       <div class="relative">
-        <img
-          src="/images/team-window-cleaning-phuket.webp"
-          srcset="/images/team-window-cleaning-phuket-800.webp 800w, /images/team-window-cleaning-phuket.webp 1200w"
-          sizes="(min-width: 1024px) 45vw, 100vw"
-          alt="ทีมแม่บ้าน Phuket Maid Service กำลังทำความสะอาดกระจกอาคารในภูเก็ต"
+        <video
           class="aspect-[4/5] w-full rounded-2xl object-cover shadow-card-hover sm:aspect-[4/3] lg:aspect-[4/4.4]"
-          width="800"
-          height="880"
-          fetchpriority="high"
-        />
+          src="/videos/maid-service-overview-phuket.mp4"
+          poster="/videos/maid-service-overview-phuket-poster.webp"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-label="ทีมแม่บ้าน Phuket Maid Service ทำความสะอาดบ้าน วิลล่า ซักโซฟาและผ้าม่านในภูเก็ต"
+        ></video>
         <div class="absolute -bottom-4 left-4 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-card-hover">
           <span class="rounded-full bg-line-600/10 p-2 text-line-600">
             <svg class="h-6 w-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.4 8 11 4.6-1.6 8-6 8-11V5l-8-3Zm-1.2 13.6-3-3 1.4-1.4 1.6 1.6 4-4L16.2 10l-5.4 5.6Z"/></svg>
