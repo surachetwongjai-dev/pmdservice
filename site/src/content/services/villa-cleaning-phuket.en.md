@@ -4,7 +4,7 @@ metaTitle: 'Villa Cleaning in Phuket, a Team for the Whole House | Phuket Maid S
 metaDescription: 'Villa cleaning in Phuket with a team sized to your home, from ฿400/hr. Background-checked staff, ฿100,000 insurance. Overseas owners welcome. Call +66 61 965 6292.'
 keywords: 'villa cleaning phuket, villa maid phuket, villa cleaning service phuket, villa care phuket'
 heroImage: '/images/living-room-deep-cleaning-phuket.webp'
-heroImageAlt: 'A maid team wiping the walls and high corners of a living room during a villa cleaning in Phuket'
+heroImageAlt: 'A maid vacuuming the living room of a Phuket villa, ready for the next guests'
 priceHighlight: '฿400'
 priceUnit: '/ hour'
 priceNote: 'Excl. tax — team sized to your villa, with a clear total quoted before we start'

@@ -24,7 +24,7 @@ steps:
   - { title: 'Confirm the team and start time', desc: 'We assess how many maids are needed and what time to start, with a clear rate quoted before the day.' }
   - { title: 'Finish the day with actual hours', desc: 'The maid works through the list all day; at the end we review it together and total the hours actually used.' }
 gallery:
-  - { src: '/images/living-room-deep-cleaning-phuket.webp', alt: 'A daily maid in Phuket wiping high corners in the living room', caption: 'A full day reaches the spots a short visit misses' }
+  - { src: '/images/living-room-deep-cleaning-phuket.webp', alt: 'A daily maid in Phuket vacuuming the whole living room', caption: 'A full day reaches the spots a short visit misses' }
   - { src: '/images/kitchen-cleaning-maid-phuket.webp', alt: 'A full-day maid wiping windows and the kitchen area in a Phuket home', caption: 'The kitchen is the first zone on the morning plan' }
   - { src: '/images/bathroom-floor-cleaning-phuket.webp', alt: 'A daily maid team scrubbing a bathroom floor in a Phuket home', caption: 'Every bathroom finished in a single day' }
   - { src: '/images/mirror-cleaning-phuket.webp', alt: 'A maid wiping a large mirror during daily work in Phuket', caption: 'Mirrors left crystal clear before guests arrive' }

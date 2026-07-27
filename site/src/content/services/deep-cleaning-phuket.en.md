@@ -35,8 +35,8 @@ steps:
   - { title: 'Get the package and price', desc: 'We propose the scope and a clear price, agreed before we start every time.' }
   - { title: 'The team deep-cleans', desc: 'Several maids arrive fully equipped, work through the list and review it with you.' }
 gallery:
-  - { src: '/images/bathroom-shower-deep-cleaning-phuket.webp', alt: 'Scrubbing limescale off a shower screen during Deep Cleaning in Phuket', caption: 'Bathroom limescale, down to the hidden spots' }
-  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'A big kitchen clean, washing cabinets and sink in every corner in Phuket', caption: 'The whole kitchen stripped and washed' }
+  - { src: '/images/bathroom-deep-cleaning-phuket.webp', alt: 'Cleaning a bathroom up to the window and high corners during Deep Cleaning in Phuket', caption: 'Bathrooms cleaned up to the corners people overlook' }
+  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'A team wiping down the fridge and every kitchen appliance during Deep Cleaning in Phuket', caption: 'The whole kitchen stripped and washed' }
   - { src: '/images/condo-deep-cleaning-phuket.webp', alt: 'A maid team wiping tall cabinets and walls during a Big Cleaning in a Phuket condo', caption: 'Dust cleared from every tall cabinet' }
   - { src: '/images/bathroom-cleaning-service-phuket.webp', alt: 'Washing and scrubbing a whole bathroom floor in a Phuket deep clean', caption: 'Bathrooms washed and fully sanitised' }
   - { src: '/images/cabinet-dusting-phuket.webp', alt: 'Cleaning behind cabinets and dust traps in a Phuket home', caption: 'Even the spots regular cleaning never reaches' }

@@ -25,8 +25,8 @@ steps:
   - { title: 'ยืนยันแพ็กเกจและราคา', desc: 'ทีมงานเสนอรายการงานพร้อมราคาเหมาชัดเจน ตกลงก่อนเริ่ม ไม่มีบวกเพิ่มหน้างาน' }
   - { title: 'ยกทีมเข้าจบในวันเดียว', desc: 'ทีมหลายคนเข้าพร้อมกันตามรายการ ตรวจรับงานร่วมกันทีละโซนก่อนปิดงาน' }
 gallery:
-  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'ทีม Big Cleaning ภูเก็ตรื้อล้างครัวขจัดคราบมันทั้งโซน', caption: 'ครัวรื้อล้างทั้งโซนในรอบเดียว' }
-  - { src: '/images/bathroom-shower-deep-cleaning-phuket.webp', alt: 'ขัดคราบหินปูนกระจกฉากอาบน้ำในงาน Big Cleaning ภูเก็ต', caption: 'ห้องน้ำขัดคราบหินปูนถึงจุดลึก' }
+  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'ทีม Big Cleaning ภูเก็ตช่วยกันเช็ดล้างตู้เย็นและครัวทั้งโซน', caption: 'ครัวรื้อล้างทั้งโซนในรอบเดียว' }
+  - { src: '/images/bathroom-deep-cleaning-phuket.webp', alt: 'ล้างห้องน้ำถึงช่องแสงและจุดสูงในงาน Big Cleaning ภูเก็ต', caption: 'ห้องน้ำล้างถึงจุดสูงที่ปกติไม่ได้ทำ' }
   - { src: '/images/condo-deep-cleaning-phuket.webp', alt: 'ทีมแม่บ้านเช็ดตู้สูงและผนังในงาน Big Cleaning คอนโดภูเก็ต', caption: 'เก็บฝุ่นตู้สูงและมุมอับทุกจุด' }
   - { src: '/images/cabinet-dusting-phuket.webp', alt: 'เช็ดหลังตู้และจุดอับฝุ่นในงานทำความสะอาดครั้งใหญ่ภูเก็ต', caption: 'จุดที่งานประจำไม่เคยถึง' }
 faq:

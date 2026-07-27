@@ -27,7 +27,7 @@ steps:
 gallery:
   - { src: '/images/bathroom-cleaning-service-phuket.webp', alt: 'Washing and sanitising the bathroom before moving into a new home in Phuket', caption: 'The whole bathroom washed and sanitised' }
   - { src: '/images/maid-kitchen-cabinet-cleaning-phuket.webp', alt: 'Wiping inside the kitchen cabinets and sink before a new family moves in, Phuket', caption: 'Inside the kitchen cabinets and sink washed before you arrange your things' }
-  - { src: '/images/living-room-deep-cleaning-phuket.webp', alt: 'Dusting and sanitising the floor of an empty home before moving in, Phuket', caption: 'Floors sanitised in the empty home before anything is moved in' }
+  - { src: '/images/living-room-deep-cleaning-phuket.webp', alt: 'Vacuuming and cleaning the living-room floor before moving in, Phuket', caption: 'Floors cleaned throughout before anything is moved in' }
 faq:
   - q: 'The last occupant just left — do I really need to clean before moving in?'
     a: 'Very much so, especially the frequent touch points and inside the cabinets and drawers the previous occupant used, which often hold grime, germs and sometimes lingering odours you cannot see. Washing and sanitising while the home is empty, before you unpack, is more thorough and reassuring — particularly for homes with young children or older relatives.'

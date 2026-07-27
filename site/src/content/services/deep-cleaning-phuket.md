@@ -35,8 +35,8 @@ steps:
   - { title: 'รับแพ็กเกจและราคา', desc: 'ทีมงานเสนอขอบเขตงานพร้อมราคาชัดเจน ตกลงก่อนเริ่มทุกครั้ง' }
   - { title: 'ทีมเข้าทำความสะอาดใหญ่', desc: 'ทีมแม่บ้านหลายคนพร้อมอุปกรณ์ครบ เก็บงานตามรายการ ตรวจรับร่วมกัน' }
 gallery:
-  - { src: '/images/bathroom-shower-deep-cleaning-phuket.webp', alt: 'ขัดคราบกระจกฉากกั้นอาบน้ำในงาน Deep Cleaning ภูเก็ต', caption: 'ขัดคราบหินปูนห้องน้ำถึงจุดที่มองข้าม' }
-  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'ทำความสะอาดครัวครั้งใหญ่ ล้างตู้และซิงก์ทุกซอกมุมภูเก็ต', caption: 'รื้อล้างครัวทั้งโซน' }
+  - { src: '/images/bathroom-deep-cleaning-phuket.webp', alt: 'ล้างห้องน้ำถึงช่องแสงและมุมสูงในงาน Deep Cleaning ภูเก็ต', caption: 'ห้องน้ำล้างถึงมุมสูงที่มองข้าม' }
+  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'ทีมงานเช็ดล้างตู้เย็นและอุปกรณ์ครัวทุกจุดในงาน Deep Cleaning ภูเก็ต', caption: 'รื้อล้างครัวทั้งโซน' }
   - { src: '/images/condo-deep-cleaning-phuket.webp', alt: 'ทีมแม่บ้านเช็ดตู้สูงและผนังในงาน Big Cleaning คอนโดภูเก็ต', caption: 'เก็บฝุ่นตู้สูงทุกใบ' }
   - { src: '/images/bathroom-cleaning-service-phuket.webp', alt: 'ฉีดล้างขัดพื้นห้องน้ำทั้งห้องในบริการดีพคลีนนิ่งภูเก็ต', caption: 'ห้องน้ำล้างทั้งห้อง ฆ่าเชื้อครบ' }
   - { src: '/images/cabinet-dusting-phuket.webp', alt: 'เช็ดทำความสะอาดหลังตู้และจุดอับฝุ่นในบ้านภูเก็ต', caption: 'จุดอับฝุ่นหลังตู้ก็ไม่เว้น' }

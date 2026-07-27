@@ -3,7 +3,7 @@ title: 'Post-Renovation Cleaning in Phuket — Cement Dust, Paint, Glue & Silico
 metaTitle: 'Post-Renovation Cleaning Phuket, Cement Dust Removal | Phuket Maid Service'
 metaDescription: 'Post-renovation cleaning in Phuket. We clear fine cement dust, paint, glue and silicone off floors and glass with repeated wet-wiping before your furniture moves back. ฿100,000 insurance. Call +66 61 965 6292.'
 heroImage: '/images/kitchen-top-cabinet-cleaning-phuket.webp'
-heroImageAlt: 'Post-renovation cleaning in Phuket, wiping cement dust off kitchen cabinets and high corners after the builders'
+heroImageAlt: 'Post-renovation cleaning in Phuket, wiping dust off the top of kitchen cabinets and high corners after the builders'
 priceHighlight: 'Ask for a quote'
 priceUnit: 'by job condition'
 priceNote: 'Quoted by area and the amount of cement dust / builders'' residue — price agreed before we start'

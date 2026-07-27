@@ -25,8 +25,8 @@ steps:
   - { title: 'Confirm the package and price', desc: 'We propose the scope with a clear package price, agreed before we start — no add-ons on the day.' }
   - { title: 'The full team finishes in one day', desc: 'Several maids arrive together and work through the list, reviewing it with you zone by zone before we close the job.' }
 gallery:
-  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'A Big Cleaning team in Phuket stripping the whole kitchen of grease', caption: 'The whole kitchen stripped and washed in one round' }
-  - { src: '/images/bathroom-shower-deep-cleaning-phuket.webp', alt: 'Scrubbing limescale off a shower screen during a Big Cleaning in Phuket', caption: 'Bathroom limescale, down to the hidden spots' }
+  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'A Big Cleaning team in Phuket wiping down the fridge and the whole kitchen', caption: 'The whole kitchen stripped and washed in one round' }
+  - { src: '/images/bathroom-deep-cleaning-phuket.webp', alt: 'Cleaning a bathroom up to the window and high spots during a Big Cleaning in Phuket', caption: 'Bathrooms cleaned right up to the spots routine work skips' }
   - { src: '/images/condo-deep-cleaning-phuket.webp', alt: 'A maid team wiping tall cabinets and walls during a Big Cleaning in a Phuket condo', caption: 'Dust cleared from every tall cabinet and hidden corner' }
   - { src: '/images/cabinet-dusting-phuket.webp', alt: 'Cleaning behind cabinets and dust traps during a big clean in Phuket', caption: 'The spots regular cleaning never reaches' }
 faq:

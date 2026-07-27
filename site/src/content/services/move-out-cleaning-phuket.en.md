@@ -26,7 +26,7 @@ steps:
   - { title: 'The team cleans the spots inspectors really check', desc: 'Focus on the bathroom, kitchen, walls and inside cabinets, restoring it as close as possible to how you received it.' }
 gallery:
   - { src: '/images/toilet-cleaning-phuket.webp', alt: 'Scrubbing sanitaryware and the bathroom to restore a rental after move-out in Phuket', caption: 'The bathroom — the first thing an agent checks' }
-  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'Washing kitchen grease and inside cabinets before returning a Phuket rental', caption: 'Kitchen and cabinets, all grease removed' }
+  - { src: '/images/kitchen-deep-cleaning-phuket.webp', alt: 'Wiping the fridge and kitchen clean before returning a Phuket rental', caption: 'Kitchen and fridge, all grease removed' }
   - { src: '/images/mirror-cleaning-phuket.webp', alt: 'Wiping glass and detailing a rental to pass inspection in Phuket', caption: 'Detailed back to the condition you received it in' }
 faq:
   - q: 'Does move-out cleaning really help get the deposit back?'

@@ -27,7 +27,7 @@ steps:
   - { title: 'Book a date and handle the building', desc: 'The team notifies management, prepares the pass-exchange documents and books the lift per the building rules on your behalf.' }
   - { title: 'We clean and report back', desc: 'We clean to the agreed list and send before-and-after photos on LINE, even when the owner is not on site.' }
 gallery:
-  - { src: '/images/kitchen-top-cabinet-cleaning-phuket.webp', alt: 'Wiping the top of a kitchen cabinet from a ladder during a condo cleaning in Phuket', caption: 'Tall built-in cabinets dusted right to the top' }
+  - { src: '/images/kitchen-top-cabinet-cleaning-phuket.webp', alt: 'Wiping the very top of a kitchen cabinet during a condo cleaning in Phuket', caption: 'Tall built-in cabinets dusted right to the top' }
   - { src: '/images/bathroom-floor-cleaning-phuket.webp', alt: 'Washing a condo bathroom floor clean and mark-free in Phuket', caption: 'Bathroom floor scrubbed across the whole surface' }
   - { src: '/images/window-squeegee-cleaning-phuket.webp', alt: 'Squeegeeing the glass door of a condo unit in Phuket', caption: 'View glass left clear and streak-free' }
 faq:
