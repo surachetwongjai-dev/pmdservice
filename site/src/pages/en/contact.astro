@@ -14,7 +14,7 @@ const mapQuery = encodeURIComponent('Baan Udomsuk, Pa Khlok, Thalang, Phuket 831
 <BaseLayout
   title="Contact Us — Book a Maid in Phuket +66 61 965 6292 | Phuket Maid Service"
   description="Contact Phuket Maid Service to book cleaning and maids. Call +66 61 965 6292, LINE: phu-andatravel. Open daily 08:00–18:00, serving all of Phuket, in Thai and English."
-  schema={[breadcrumbSchema(crumbs)]}
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
   altUrl="/contact/"
 >
   <section class="bg-gradient-to-b from-brand-50 to-white">

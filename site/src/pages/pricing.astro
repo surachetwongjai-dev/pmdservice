@@ -58,7 +58,7 @@ const groups = [
 <BaseLayout
   title="ราคาบริการทำความสะอาดภูเก็ต ทุกรายการ | Phuket Maid Service"
   description="ตารางราคาบริการทำความสะอาดภูเก็ต แม่บ้านรายชั่วโมง 400 บ./ชม. Big Cleaning เริ่ม 4,000 บ. ซักโซฟาเริ่ม 1,000 บ. ขัดหินอ่อน 250 บ./ตร.ม. ราคาชัดเจนไม่มีบวกเพิ่ม โทร 061-965-6292"
-  schema={[breadcrumbSchema(crumbs)]}
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
   altUrl="/en/pricing/"
 >
   <section class="bg-gradient-to-b from-brand-50 to-white">

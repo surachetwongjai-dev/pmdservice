@@ -26,13 +26,14 @@ const pillars = [
   { label: 'Deep cleaning for homes & condos', href: '/en/services/deep-cleaning-phuket/' },
 ];
 
+// No /en/locations/ index page exists, so the "Service areas" crumb is dropped
+// (a ListItem without `item` triggers the GSC "Missing field item" error)
 const crumbs = [
   { label: 'Home', href: '/en/' },
-  { label: 'Service areas' },
   { label: d.areaName },
 ];
 
-const schema = [breadcrumbSchema(crumbs), ...(d.faq.length ? [faqSchema(d.faq)] : [])];
+const schema = [breadcrumbSchema(crumbs, Astro.url.pathname), ...(d.faq.length ? [faqSchema(d.faq)] : [])];
 const altUrl = `/locations/${baseSlug}/`;
 ---
 

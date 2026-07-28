@@ -1,16 +1,24 @@
 import { SITE } from './site';
 
-/** BreadcrumbList schema จากรายการ breadcrumb */
-export function breadcrumbSchema(crumbs: { label: string; href?: string }[]) {
+/**
+ * BreadcrumbList schema จากรายการ breadcrumb
+ * crumb สุดท้าย (หน้าปัจจุบัน) ไม่มี href เพราะบนหน้าจอไม่ทำเป็นลิงก์
+ * แต่ Google ต้องการ field `item` ทุก ListItem จึงต้องส่ง currentPath มาเติมให้
+ */
+export function breadcrumbSchema(crumbs: { label: string; href?: string }[], currentPath?: string) {
+  const last = crumbs.length - 1;
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
-    itemListElement: crumbs.map((c, i) => ({
-      '@type': 'ListItem',
-      position: i + 1,
-      name: c.label,
-      ...(c.href ? { item: new URL(c.href, SITE.domain).href } : {}),
-    })),
+    itemListElement: crumbs.map((c, i) => {
+      const href = c.href ?? (i === last ? currentPath : undefined);
+      return {
+        '@type': 'ListItem',
+        position: i + 1,
+        name: c.label,
+        ...(href ? { item: new URL(href, SITE.domain).href } : {}),
+      };
+    }),
   };
 }
 

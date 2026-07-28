@@ -12,7 +12,7 @@ const mapQuery = encodeURIComponent('หมู่บ้านอุดมสุ�
 <BaseLayout
   title="ติดต่อเรา จองแม่บ้านภูเก็ต โทร 061-965-6292 | Phuket Maid Service"
   description="ติดต่อจองแม่บ้านและบริการทำความสะอาดภูเก็ต โทร 061-965-6292 LINE: phu-andatravel เปิดทุกวัน 08:00-18:00 น. สำนักงานอยู่ป่าคลอก ถลาง ให้บริการทั่วภูเก็ต ตอบทั้งไทยและอังกฤษ"
-  schema={[breadcrumbSchema(crumbs)]}
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
   altUrl="/en/contact/"
 >
   <section class="bg-gradient-to-b from-brand-50 to-white">

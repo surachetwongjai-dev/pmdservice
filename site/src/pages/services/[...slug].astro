@@ -31,7 +31,7 @@ const crumbs = [
 ];
 
 const schema = [
-  breadcrumbSchema(crumbs),
+  breadcrumbSchema(crumbs, Astro.url.pathname),
   serviceSchema({
     name: d.title,
     description: d.metaDescription,

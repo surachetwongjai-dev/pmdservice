@@ -58,7 +58,7 @@ const groups = [
 <BaseLayout
   title="Cleaning Prices in Phuket — All Services | Phuket Maid Service"
   description="Phuket cleaning prices: hourly maids ฿400/hr, Big Cleaning from ฿4,000, sofa cleaning from ฿1,000, marble polishing ฿250/sqm. Clear pricing, no hidden fees. Call +66 61 965 6292."
-  schema={[breadcrumbSchema(crumbs)]}
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
   altUrl="/pricing/"
 >
   <section class="bg-gradient-to-b from-brand-50 to-white">

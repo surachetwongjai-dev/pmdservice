@@ -12,7 +12,7 @@ const crumbs = [{ label: 'Home', href: '/en/' }, { label: 'Privacy Policy' }];
 <BaseLayout
   title="Privacy Policy (PDPA) | Phuket Maid Service"
   description="Privacy policy for Phuket Maid Service (Phu Anda Co., Ltd.) under Thailand's Personal Data Protection Act (PDPA), covering how we collect, use and protect your data."
-  schema={[breadcrumbSchema(crumbs)]}
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
   altUrl="/privacy-policy/"
 >
   <section class="bg-gradient-to-b from-brand-50 to-white">
