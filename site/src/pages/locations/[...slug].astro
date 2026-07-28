@@ -26,10 +26,9 @@ const pillars = [
   { label: 'Deep Cleaning บ้าน คอนโด', href: '/services/deep-cleaning-phuket/' },
 ];
 
-// ไม่มีหน้า /locations/ index จึงไม่ใส่ crumb "พื้นที่ให้บริการ"
-// (ListItem ที่ไม่มี item ทำให้ GSC ฟ้อง "ช่องที่ขาดหาย item")
 const crumbs = [
   { label: 'หน้าแรก', href: '/' },
+  { label: 'พื้นที่ให้บริการ', href: '/locations/' },
   { label: d.areaName },
 ];
 

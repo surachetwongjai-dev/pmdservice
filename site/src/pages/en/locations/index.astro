@@ -1,0 +1,100 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CtaButtons from '../../../components/CtaButtons.astro';
+import CtaSection from '../../../components/CtaSection.astro';
+import TrustBadges from '../../../components/TrustBadges.astro';
+import { breadcrumbSchema } from '../../../lib/schema';
+
+// Service-area hub — pulled from the content collection so it always matches the real pages
+const locations = await getCollection('locations', ({ data, id }) => !data.draft && id.endsWith('.en'));
+locations.sort((a, b) => a.data.areaName.localeCompare(b.data.areaName, 'en'));
+
+const crumbs = [{ label: 'Home', href: '/en/' }, { label: 'Service areas' }];
+---
+
+<BaseLayout
+  title="Cleaning Service Areas Across Phuket | Phuket Maid Service"
+  description="Phuket Maid Service covers the whole island — Patong, Kata, Karon, Rawai, Cherng Talay, Bang Tao, Kamala, Nai Yang, Mai Khao, Chalong and Phuket Town. See travel times and the services each area books most."
+  schema={[breadcrumbSchema(crumbs, Astro.url.pathname)]}
+  altUrl="/locations/"
+>
+  <section class="bg-gradient-to-b from-brand-50 to-white">
+    <div class="mx-auto max-w-6xl px-4 pt-5">
+      <Breadcrumbs crumbs={crumbs} />
+    </div>
+    <div class="mx-auto max-w-6xl px-4 pb-10 pt-6 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-navy-900 md:text-4xl">
+        Service areas across Phuket
+      </h1>
+      <p class="mx-auto mt-4 max-w-3xl leading-relaxed text-ink-600">
+        Our team is based in Pa Khlok, Thalang and works across the whole island — from the dense hotel
+        strips of Patong to the quiet pool-villa pockets around Cherng Talay and Mai Khao. Every area has
+        its own mix of properties and its own routine jobs, so pick your area to see the services that
+        actually suit the homes there.
+      </p>
+      <CtaButtons class="mt-6 justify-center" />
+      <p class="mt-3 text-xs text-ink-600">Open daily 08:00 – 18:00 — fast replies in both Thai and English.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-12 md:py-16">
+    <div class="mx-auto max-w-6xl px-4">
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {locations.map((loc) => (
+          <a
+            href={`/en/locations/${loc.id.replace(/\.en$/, '')}/`}
+            class="group flex flex-col overflow-hidden rounded-2xl border border-brand-100 bg-white shadow-card transition hover:-translate-y-1 hover:shadow-card-hover"
+          >
+            <img
+              src={loc.data.heroImage}
+              srcset={`${loc.data.heroImage.replace('.webp', '-800.webp')} 800w, ${loc.data.heroImage} 1200w`}
+              sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 100vw"
+              alt={loc.data.heroImageAlt}
+              class="aspect-[4/3] w-full object-cover"
+              width="640"
+              height="480"
+              loading="lazy"
+            />
+            <div class="flex flex-1 flex-col gap-2 p-5">
+              <h2 class="text-lg font-extrabold text-navy-900 group-hover:text-brand-600">
+                Cleaners in {loc.data.areaName}
+              </h2>
+              {loc.data.travelNote && (
+                <p class="text-sm leading-relaxed text-ink-600">{loc.data.travelNote}</p>
+              )}
+              {loc.data.popularServices.length > 0 && (
+                <div class="mt-1 flex flex-wrap gap-1.5">
+                  {loc.data.popularServices.slice(0, 3).map((s) => (
+                    <span class="rounded-full bg-brand-50 px-2.5 py-1 text-[11px] font-semibold text-brand-700">
+                      {s.label}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <span class="mt-auto pt-3 text-sm font-bold text-brand-600">See services in this area →</span>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <div class="mt-10 rounded-2xl border border-brand-100 bg-brand-50 p-5 text-sm leading-relaxed text-ink-600">
+        <p class="mb-2 font-bold text-navy-900">About travel fees</p>
+        <ul class="space-y-1.5">
+          <li>• Beachfront areas and places far from town carry a travel fee from ฿100–300 by distance, always confirmed before we accept the job.</li>
+          <li>• Don't see your area listed? We cover the whole island — just send us your location on LINE.</li>
+          <li>• Monthly contracts for hotels, pool villas and offices come at special package rates.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="border-t border-brand-50 bg-white pb-14">
+    <div class="mx-auto max-w-6xl px-4 pt-10">
+      <TrustBadges />
+    </div>
+  </section>
+
+  <CtaSection title="Wherever you are on the island, send us your location on LINE" />
+</BaseLayout>
